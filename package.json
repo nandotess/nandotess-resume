@@ -1,0 +1,36 @@
+{
+	"name": "nandotess-resume",
+	"version": "1.0.0",
+	"description": "A WordPress theme for building fast, responsive and awesome web resumes",
+	"homepage": "https://github.com/nandotess/nandotess-resume",
+	"bugs": {
+		"url": "https://github.com/nandotess/nandotess-resume/issues",
+		"email": "nandotess85@gmail.com"
+	},
+	"license": "GPL-3.0",
+	"author": "Fernando Tessmann <nandotess85@mail.com> (http://www.fernandotessmann.com)",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/nandotess/nandotess-resume.git"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"bower": "^1.7.7",
+		"gulp": "^3.9.1",
+		"gulp-cli": "^1.2.1",
+		"gulp-ruby-sass": "^2.0.6",
+		"gulp-cssnano": "^2.1.2",
+		"gulp-uglify": "^1.5.3",
+		"gulp-rename": "^1.2.2",
+		"gulp-resolve-dependencies": "^2.2.0",
+		"gulp-concat": "^2.6.0",
+		"gulp-foreach": "^0.1.0",
+		"path": "^0.12.7",
+		"gulp-sort": "^2.0.0",
+		"gulp-wp-pot": "^1.2.2",
+		"gulp-gettext": "^0.3.0",
+		"gulp-jshint": "^1.11.2"
+	}
+}
