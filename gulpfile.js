@@ -28,7 +28,7 @@ gulp.task('default', function() {
 // CSS
 
 gulp.task('compile-css', function() {
-	return sass('assets/css/scss/style.scss', { style: 'compact' })
+	return sass('assets/css/scss/nandotess-resume.scss', { style: 'compact' })
 		.pipe(gulp.dest('assets/css'))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(cssnano())

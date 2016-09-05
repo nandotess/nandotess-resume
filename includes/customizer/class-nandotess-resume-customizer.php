@@ -85,7 +85,7 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 			 */
 			$wp_customize->add_section( 'nandotess_resume_background' , array(
 				'title'      			=> __( 'Background', 'nandotess-resume' ),
-				'priority'   			=> 45,
+				'priority'   			=> 25,
 			) );
 
 			/**
@@ -102,6 +102,58 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 				'settings' 				=> 'nandotess_resume_background_color',
 				'priority' 				=> 1,
 			) ) );
+
+			/**
+			 * Add the contact details section
+			 */
+			$wp_customize->add_section( 'nandotess_resume_contact_details' , array(
+				'title'      			=> __( 'Contact Details', 'nandotess-resume' ),
+				'priority'   			=> 26,
+			) );
+
+			/**
+			 * Phone
+			 */
+			$wp_customize->add_setting( 'nandotess_resume_phone', array(
+				'default'           	=> '+0000 0000 0000',
+				'transport'          	=> 'postMessage',
+			) );
+
+			$wp_customize->add_control( 'nandotess_resume_phone', array(
+				'label'	   				=> __( 'Phone', 'nandotess-resume' ),
+				'section'  				=> 'nandotess_resume_contact_details',
+				'settings' 				=> 'nandotess_resume_phone',
+				'priority' 				=> 1,
+			) );
+
+			$wp_customize->selective_refresh->add_partial( 'nandotess_resume_phone', array(
+				'selector'              => '.phone',
+				'render_callback'       => function() {
+					echo get_theme_mod( 'nandotess_resume_phone', '+0000 0000 0000' );
+				},
+			) );
+
+			/**
+			 * Mail
+			 */
+			$wp_customize->add_setting( 'nandotess_resume_mail', array(
+				'default'           	=> 'mail@mail.com',
+				'transport'          	=> 'postMessage',
+			) );
+
+			$wp_customize->add_control( 'nandotess_resume_mail', array(
+				'label'	   				=> __( 'Mail', 'nandotess-resume' ),
+				'section'  				=> 'nandotess_resume_contact_details',
+				'settings' 				=> 'nandotess_resume_mail',
+				'priority' 				=> 2,
+			) );
+
+			$wp_customize->selective_refresh->add_partial( 'nandotess_resume_mail', array(
+				'selector'              => '.mail',
+				'render_callback'       => function() {
+					echo get_theme_mod( 'nandotess_resume_mail', 'mail@mail.com' );
+				},
+			) );
 		}
 		
 		/**
@@ -134,7 +186,7 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 			global $wp_filesystem;
 
 			$theme_mods = $this->get_theme_mods();
-			$scss_file = get_template_directory() .'/assets/css/scss/customizer.scss';
+			$scss_file = get_template_directory() .'/assets/css/scss/nandotess-resume-customizer.scss';
 			$css = '';
 
 			if ( file_exists( $scss_file ) ) {

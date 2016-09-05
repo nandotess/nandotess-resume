@@ -11,5 +11,9 @@ if ( ! is_active_sidebar( 'homepage-sidebar' ) ) {
 ?>
 
 <div class="widget-area">
-	<?php dynamic_sidebar( 'homepage-sidebar' ); ?>
+	<div class="grid">
+		<div class="col-1-1">
+			<?php dynamic_sidebar( 'homepage-sidebar' ); ?>
+		</div>
+	</div>
 </div><!-- .widget-area -->

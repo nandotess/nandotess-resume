@@ -1,0 +1,11 @@
+* {
+	&,
+	&:after,
+	&:before {
+		@include box-sizing(border-box);
+	}
+}
+
+body {
+	background-color: $color__background-body;
+}

@@ -1,0 +1,54 @@
+.grid {
+	margin: 0 auto $grid-padding auto;
+	max-width: 1280px;
+	width: 90%;
+
+	@include at-least(tablet) {
+		width: 85%;
+	}
+
+	@include at-least(laptop) {
+		width: 70%;
+	}
+	
+	@extend %clearfix
+}
+
+[class*='col-'] {
+	float: left;
+	padding-right: $grid-padding;
+	
+	.grid {
+		&:last-of-type {
+			padding-right: 0;
+		}
+	}
+}
+
+.col-1-1 {
+	width: 100%;
+}
+
+.col-1-2 {
+	width: 50%;
+}
+
+.col-2-3 {
+	width: 66.66%;
+}
+
+.col-1-3 {
+	width: 33.33%;
+}
+
+.col-1-4 {
+	width: 25%;
+}
+
+.grid-pad {
+	padding: $grid-padding 0 $grid-padding $grid-padding;
+	
+	[class*='col-']:last-of-type {
+		padding-right: $grid-padding;
+	}
+}
