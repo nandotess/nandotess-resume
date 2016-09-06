@@ -41,7 +41,7 @@
 	transform: $args;
 }
 
-@mixin font-size($arg: 1) {
-	font-size: ($arg * 16) * 1px;
-	font-size: $arg * 1rem;
+@mixin rem-size($property, $arg: 1) {
+	#{$property}: ($arg * 16) * 1px;
+	#{$property}: $arg * 1rem;
 }

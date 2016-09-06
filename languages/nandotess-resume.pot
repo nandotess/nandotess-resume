@@ -15,15 +15,15 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: footer.php:13
+#: footer.php:15
 msgid "https://wordpress.org/"
 msgstr ""
 
-#: footer.php:13
+#: footer.php:15
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: footer.php:15
+#: footer.php:16
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
@@ -31,19 +31,15 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:38
-msgid "Primary Menu"
-msgstr ""
-
-#: includes/class-nandotess-resume.php:41
+#: includes/class-nandotess-resume.php:40
 msgid "Primary"
 msgstr ""
 
-#: includes/class-nandotess-resume.php:50
+#: includes/class-nandotess-resume.php:49
 msgid "Homepage"
 msgstr ""
 
-#: includes/class-nandotess-resume.php:52
+#: includes/class-nandotess-resume.php:51
 msgid "Add homepage widgets here."
 msgstr ""
 
@@ -53,6 +49,18 @@ msgstr ""
 
 #: includes/customizer/class-nandotess-resume-customizer.php:100
 msgid "Background color"
+msgstr ""
+
+#: includes/customizer/class-nandotess-resume-customizer.php:110
+msgid "Contact Details"
+msgstr ""
+
+#: includes/customizer/class-nandotess-resume-customizer.php:123
+msgid "Phone"
+msgstr ""
+
+#: includes/customizer/class-nandotess-resume-customizer.php:145
+msgid "Mail"
 msgstr ""
 
 #: partials/content-none.php:14

@@ -24,8 +24,7 @@ if ( ! class_exists( 'NandotessResume' ) ) :
 		public function __construct() {
 			add_action( 'after_setup_theme',  array( $this, 'setup' ) );
 			add_action( 'widgets_init',       array( $this, 'widgets_init' ) );
-			add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ),       10 );
-			//add_action( 'wp_footer',                  array( $this, 'get_structured_data' ) );
+			add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ), 10 );
 		}
 		
 		/**
@@ -68,66 +67,14 @@ if ( ! class_exists( 'NandotessResume' ) ) :
 		 * Enqueue scripts and styles.
 		 */
 		public function scripts() {
+			wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/vendor/font-awesome/css/font-awesome.min.css', array(), '4.6.3' );
+			
 			wp_enqueue_style( 'nandotess-resume-style', get_template_directory_uri() . '/assets/css/nandotess-resume.css', array(), NANDOTESS_RESUME_VERSION );
 			wp_style_add_data( 'nandotess-resume-style', 'rtl', 'replace' );
 			
 			wp_enqueue_script( 'nandotess-resume-navigation', get_template_directory_uri() . '/assets/js/navigation.min.js', array(), NANDOTESS_RESUME_VERSION, true );
 			wp_enqueue_script( 'nandotess-resume-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.min.js', array(), NANDOTESS_RESUME_VERSION, true );
 		}
-
-		/**
-		 * Check if the passed $json variable is an array and store it into the property...
-		 */
-		/*public static function set_structured_data( $json ) {
-			if ( ! is_array( $json ) ) {
-				return;
-			}
-
-			self::$structured_data[] = $json;
-		}*/
-
-		/**
-		 * If self::$structured_data is set, wrap and echo it...
-		 * Hooked into the `wp_footer` action.
-		 */
-		/*public function get_structured_data() {
-			if ( ! self::$structured_data ) {
-				return;
-			}
-			
-			$structured_data['@context'] = 'http://schema.org/';
-			
-			if ( count( self::$structured_data ) > 1 ) {
-				$structured_data['@graph'] = self::$structured_data;
-			} else {
-				$structured_data = $structured_data + self::$structured_data[0];
-			}
-
-			$structured_data = $this->sanitize_structured_data( $structured_data );
-			echo '<script type="application/ld+json">' . wp_json_encode( $structured_data ) . '</script>';
-		}*/
-
-		/**
-		 * Sanitize structured data.
-		 *
-		 * @param  array $data
-		 * @return array
-		 */
-		/*public function sanitize_structured_data( $data ) {
-			$sanitized = array();
-			
-			foreach ( $data as $key => $value ) {
-				if ( is_array( $value ) ) {
-					$sanitized_value = $this->sanitize_structured_data( $value );
-				} else {
-					$sanitized_value = sanitize_text_field( $value );
-				}
-
-				$sanitized[ sanitize_text_field( $key ) ] = $sanitized_value;
-			}
-
-			return $sanitized;
-		}*/
 
 	}
 

@@ -14,49 +14,50 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-		<div id="page" class="site">
+		<div class="page">
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'nandotess-resume' ); ?></a>
 
-			<div class="contact-details">
-				<div class="grid">
-					<div class="col-1-1">
-						<?php
-							$phone = get_theme_mod( 'nandotess_resume_phone', '+0000 0000 0000' );
-							$phone_numbers = preg_replace( '/\D/', '', $phone );
+			<header id="header" class="header">
+				<div class="grid contact-details">
+					<div class="row">
+						<div class="col-1-1">
+							<?php
+								$mail  = get_theme_mod( 'nandotess_resume_mail', 'mail@mail.com' );
+								$phone = get_theme_mod( 'nandotess_resume_phone', '+0000 0000 0000' );
+								$phone_numbers = preg_replace( '/\D/', '', $phone );
+							?>
 
-							$mail = get_theme_mod( 'nandotess_resume_mail', 'mail@mail.com' );
-						?>
-						
-						<a class="phone" href="tel:<?php echo $phone_numbers; /* WPCS: xss ok. */ ?>"><?php echo $phone; /* WPCS: xss ok. */ ?></a>
-						<span class="sep"> | </span>
-						<a class="mail" href="mailto:<?php echo $mail; /* WPCS: xss ok. */ ?>"><?php echo $mail; /* WPCS: xss ok. */ ?></a>
+							<a class="mail" href="mailto:<?php echo $mail; /* WPCS: xss ok. */ ?>"><i class="fa fa-envelope" aria-hidden="true"></i> <?php echo $mail; /* WPCS: xss ok. */ ?></a>
+							<a class="phone" href="tel:<?php echo $phone_numbers; /* WPCS: xss ok. */ ?>"><i class="fa fa-phone" aria-hidden="true"></i> <?php echo $phone; /* WPCS: xss ok. */ ?></a>
+						</div>
 					</div>
-				</div>
-			</div>
+				</div><!-- .contact-details -->
 
-			<nav class="main-navigation">
-				<div class="grid">
-					<div class="col-1-1">
-						<!--<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'nandotess-resume' ); ?></button>-->
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+				<nav class="grid main-navigation">
+					<div class="row">
+						<div class="col-1-1">
+							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars" aria-hidden="true"></i></button>
+							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+						</div>
 					</div>
-				</div>
-			</nav><!-- .main-navigation -->
+				</nav><!-- .main-navigation -->
+			</header><!-- .header -->
 
-			<header id="about" class="site-header">
-				<div class="grid">
-					<div class="col-1-1">
-						<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+			<div id="content" class="content">
+				<section id="about" class="section about">
+					<div class="grid">
+						<div class="row">
+							<div class="col-1-1">
+								<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 
-						<?php
-							$description = get_bloginfo( 'description', 'display' );
+								<?php
+									$description = get_bloginfo( 'description', 'display' );
 
-							if ( $description || is_customize_preview() ) : ?>
-								<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-							<?php endif;
-						?>
+									if ( $description || is_customize_preview() ) : ?>
+										<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+									<?php endif;
+								?>
+							</div>
+						</div>
 					</div>
-				</div>
-			</header><!-- #about -->
-
-			<div id="content" class="site-content">
+				</section><!-- .section.about -->
