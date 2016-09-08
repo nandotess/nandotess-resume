@@ -4,8 +4,7 @@
 ( function($) {
 
 	$('body').scrollspy({
-		target: '#navbar-main',
-		offset: 50
+		target: '#navbar-main'
 	});
 
 	$('.navbar-main').affix({

@@ -26,7 +26,7 @@
 
 				<nav class="navbar navbar-contact-details hidden-xs">
 					<div class="container">
-						<ul class="nav navbar-nav navbar-right">
+						<ul class="nav navbar-nav">
 							<li><a class="phone" href="tel:<?php echo $phone_numbers; /* WPCS: xss ok. */ ?>"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> <span class="text"><?php echo $phone; /* WPCS: xss ok. */ ?></span></a></li>
 							<li><a class="mail" href="mailto:<?php echo $mail; /* WPCS: xss ok. */ ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <span class="text"><?php echo $mail; /* WPCS: xss ok. */ ?></span></a></li>
 						</ul>

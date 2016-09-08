@@ -7,8 +7,13 @@
 		border: none;
 		border-radius: 0;
 		margin-bottom: 0;
+		max-height: 54px;
+		text-align: center;
 
 		.navbar-nav {
+			display: inline-block;
+			float: none;
+			
 			li {
 				@include nav-link($contact_details_text_color, 500);
 
@@ -55,7 +60,17 @@
 			border-top: none;
 			@include box-shadow(none);
 
+			@media (min-width: $screen-sm-min) {
+				max-height: 54px;
+				text-align: center;
+			}
+
 			.navbar-nav {
+				@media (min-width: $screen-sm-min) {
+					display: inline-block;
+					float: none;
+				}
+
 				li {
 					@include nav-link($main_menu_text_color, normal, uppercase);
 				}
