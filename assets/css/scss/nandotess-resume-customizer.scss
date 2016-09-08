@@ -61,3 +61,41 @@ body {
 		}
 	}
 }
+
+.section {
+	&.about {
+		.col-md-12 {
+			background-color: $section_about_background_color;
+		}
+
+		.section-title {
+			color: $section_about_text_color;
+		}
+
+		.section-description {
+			color: lighten($section_about_text_color, 10%);
+		}
+
+		.section-full-description {
+			color: lighten($section_about_text_color, 10%);
+
+			a {
+				color: $section_about_link_color;
+
+				&:hover,
+				&:active,
+				&:focus {
+					color: lighten($section_about_link_color, 10%);
+				}
+			}
+		}
+	}
+
+	&.skills {
+		color: $section_skills_text_color;
+
+		.col-md-12 {
+			background-color: $section_skills_background_color;
+		}
+	}
+}

@@ -1,10 +1,9 @@
 <?php
 /**
- * The header.
+ * The header
  *
  * @package nandotess-resume
  */
-
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
@@ -18,20 +17,7 @@
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'nandotess-resume' ); ?></a>
 
 			<header id="header" class="header">
-				<?php
-					$mail  = get_theme_mod( 'nandotess_resume_mail', 'mail@mail.com' );
-					$phone = get_theme_mod( 'nandotess_resume_phone', '+0000 0000 0000' );
-					$phone_numbers = preg_replace( '/\D/', '', $phone );
-				?>
-
-				<nav class="navbar navbar-contact-details hidden-xs">
-					<div class="container">
-						<ul class="nav navbar-nav">
-							<li><a class="phone" href="tel:<?php echo $phone_numbers; /* WPCS: xss ok. */ ?>"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> <span class="text"><?php echo $phone; /* WPCS: xss ok. */ ?></span></a></li>
-							<li><a class="mail" href="mailto:<?php echo $mail; /* WPCS: xss ok. */ ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <span class="text"><?php echo $mail; /* WPCS: xss ok. */ ?></span></a></li>
-						</ul>
-					</div>
-				</nav>
+				<?php get_template_part( 'partials/content', 'header-contact-details-desktop' ); ?>
 
 				<nav class="navbar navbar-main">
 					<div class="container">
@@ -43,10 +29,7 @@
 								<span class="icon-bar"></span>
 							</button>
 
-							<ul class="nav navbar-nav hidden visible-xs">
-								<li><a class="phone" href="tel:<?php echo $phone_numbers; /* WPCS: xss ok. */ ?>"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></a></li>
-								<li><a class="mail" href="mailto:<?php echo $mail; /* WPCS: xss ok. */ ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
-							</ul>
+							<?php get_template_part( 'partials/content', 'header-contact-details-mobile' ); ?>
 						</div>
 
 						<div class="collapse navbar-collapse" id="navbar-main">
@@ -63,20 +46,3 @@
 			</header>
 
 			<div id="content" class="content">
-				<section id="about" class="section about">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12">
-								<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-
-								<?php
-									$description = get_bloginfo( 'description', 'display' );
-
-									if ( $description || is_customize_preview() ) : ?>
-										<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-									<?php endif;
-								?>
-							</div>
-						</div>
-					</div>
-				</section>

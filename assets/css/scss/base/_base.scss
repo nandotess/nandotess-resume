@@ -26,3 +26,11 @@ body {
 		width: 70%;
 	}
 }
+
+a {
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none;
+	}
+}

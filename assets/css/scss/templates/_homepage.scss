@@ -1,5 +1,94 @@
 .section {
-	&.about {
+	padding-top: 40px;
 
+	&.about {
+		padding-top: 100px;
+
+		@media (min-width: $screen-sm-min) {
+			padding-top: 140px;
+		}
+		
+		.col-md-12 {
+			background-color: $section_about_background_color;
+			padding: 20px;
+			text-align: center;
+
+			@media (min-width: $screen-sm-min) {
+				padding: 40px;
+			}
+
+			@media (min-width: $screen-md-min) {
+				padding: 80px 40px;
+			}
+		}
+
+		.thumbnail {
+			margin: -100px auto 0 auto;
+			width: 150px;
+			@include border-radius(50%);
+
+			@media (min-width: $screen-sm-min) {
+				margin-top: -140px;
+			}
+			
+			img {
+				@include border-radius(50%);
+			}
+		}
+
+		.section-title {
+			color: $section_about_text_color;
+			font-size: 35px;
+			line-height: 40px;
+			margin: 20px 0 0 0;
+
+			@media (min-width: $screen-md-min) {
+				margin-top: 40px;
+			}
+		}
+
+		.section-description {
+			color: lighten($section_about_text_color, 10%);
+			font: {
+				size: 18px;
+				weight: normal;
+			}
+			margin: 15px 0 0 0;
+		}
+
+		.section-full-description {
+			color: lighten($section_about_text_color, 10%);
+			font-size: 15px;
+			line-height: 27px;
+			margin: 20px 0 0 0;
+
+			@media (min-width: $screen-md-min) {
+				margin: 20px 90px 0 90px;
+			}
+
+			p {
+				margin: 0;
+			}
+
+			a {
+				color: $section_about_link_color;
+				@include transition(color 500ms ease-in-out);
+
+				&:hover,
+				&:active,
+				&:focus {
+					color: lighten($section_about_link_color, 10%);
+				}
+			}
+		}
+	}
+
+	&.skills {
+		color: $section_skills_text_color;
+
+		.col-md-12 {
+			background-color: $section_skills_background_color;
+			padding: 40px;
+		}
 	}
 }

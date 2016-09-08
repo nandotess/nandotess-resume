@@ -1,20 +1,23 @@
 /**
  * nandotess-resume.js
  */
-( function($) {
+(function($) {
 
-	$('body').scrollspy({
-		target: '#navbar-main'
-	});
+	$(window).load(function() {
 
-	$('.navbar-main').affix({
-		offset: {
-			top: function () {
-				return (this.top = $('.navbar-contact-details').outerHeight(true));
+		$('body').scrollspy({
+			target: '#navbar-main',
+			offset: $('.navbar-main').outerHeight(true)
+		});
+
+		$('.navbar-main').affix({
+			offset: {
+				top: $('.navbar-contact-details').outerHeight(true)
 			}
-		}
+		});
+
 	});
-	
+
 	$(document).on('affixed.bs.affix', '.navbar-main', function() {
 		$('body').addClass('navbar-main-affixed');
 	});

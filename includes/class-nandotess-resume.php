@@ -54,9 +54,9 @@ if ( ! class_exists( 'NandotessResume' ) ) :
 
 			foreach ( $sidebar_args as $sidebar => $args ) {
 				$widget_tags = array(
-					'before_widget' => '<div id="%1$s" class="widget %2$s">',
+					'before_widget' => '<div class="widget %2$s">',
 					'after_widget'  => '</div>',
-					'before_title'  => '<h2 class="widget-title">',
+					'before_title'  => '<h2 class="section-title">',
 					'after_title'   => '</h2>'
 				);
 

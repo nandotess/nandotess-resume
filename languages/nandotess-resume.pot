@@ -15,7 +15,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: header.php:18
+#: header.php:17
 msgid "Skip to content"
 msgstr ""
 
@@ -39,7 +39,7 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
-#: includes/customizer/class-nandotess-resume-customizer.php:100, includes/customizer/class-nandotess-resume-customizer.php:123, includes/customizer/class-nandotess-resume-customizer.php:205
+#: includes/customizer/class-nandotess-resume-customizer.php:100, includes/customizer/class-nandotess-resume-customizer.php:123, includes/customizer/class-nandotess-resume-customizer.php:205, includes/customizer/class-nandotess-resume-customizer.php:243, includes/customizer/class-nandotess-resume-customizer.php:296
 msgid "Background color"
 msgstr ""
 
@@ -47,7 +47,7 @@ msgstr ""
 msgid "Contact Details"
 msgstr ""
 
-#: includes/customizer/class-nandotess-resume-customizer.php:138, includes/customizer/class-nandotess-resume-customizer.php:220
+#: includes/customizer/class-nandotess-resume-customizer.php:138, includes/customizer/class-nandotess-resume-customizer.php:220, includes/customizer/class-nandotess-resume-customizer.php:258, includes/customizer/class-nandotess-resume-customizer.php:311
 msgid "Text color"
 msgstr ""
 
@@ -63,10 +63,22 @@ msgstr ""
 msgid "Main Menu"
 msgstr ""
 
-#: partials/content-none.php:14
+#: includes/customizer/class-nandotess-resume-customizer.php:230
+msgid "Section About"
+msgstr ""
+
+#: includes/customizer/class-nandotess-resume-customizer.php:273
+msgid "Link color"
+msgstr ""
+
+#: includes/customizer/class-nandotess-resume-customizer.php:283
+msgid "Section Skills"
+msgstr ""
+
+#: partials/content-none.php:13
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: partials/content-none.php:18
+#: partials/content-none.php:14
 msgid "It looks like nothing was found at this location."
 msgstr ""

@@ -1,10 +1,9 @@
 <?php
 /**
- * The footer.
+ * The footer
  *
  * @package nandotess-resume
  */
-
 ?>
 			</div>
 
