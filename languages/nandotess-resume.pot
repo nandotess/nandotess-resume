@@ -15,18 +15,6 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: footer.php:15
-msgid "https://wordpress.org/"
-msgstr ""
-
-#: footer.php:15
-msgid "Proudly powered by %s"
-msgstr ""
-
-#: footer.php:16
-msgid "Theme: %1$s by %2$s."
-msgstr ""
-
 #: header.php:18
 msgid "Skip to content"
 msgstr ""
@@ -35,11 +23,15 @@ msgstr ""
 msgid "Primary"
 msgstr ""
 
-#: includes/class-nandotess-resume.php:49
+#: includes/class-nandotess-resume.php:41
+msgid "Social"
+msgstr ""
+
+#: includes/class-nandotess-resume.php:50
 msgid "Homepage"
 msgstr ""
 
-#: includes/class-nandotess-resume.php:51
+#: includes/class-nandotess-resume.php:52
 msgid "Add homepage widgets here."
 msgstr ""
 
