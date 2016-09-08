@@ -47,7 +47,7 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
-#: includes/customizer/class-nandotess-resume-customizer.php:100
+#: includes/customizer/class-nandotess-resume-customizer.php:100, includes/customizer/class-nandotess-resume-customizer.php:123, includes/customizer/class-nandotess-resume-customizer.php:205
 msgid "Background color"
 msgstr ""
 
@@ -55,12 +55,20 @@ msgstr ""
 msgid "Contact Details"
 msgstr ""
 
-#: includes/customizer/class-nandotess-resume-customizer.php:123
+#: includes/customizer/class-nandotess-resume-customizer.php:138, includes/customizer/class-nandotess-resume-customizer.php:220
+msgid "Text color"
+msgstr ""
+
+#: includes/customizer/class-nandotess-resume-customizer.php:153
 msgid "Phone"
 msgstr ""
 
-#: includes/customizer/class-nandotess-resume-customizer.php:145
+#: includes/customizer/class-nandotess-resume-customizer.php:175
 msgid "Mail"
+msgstr ""
+
+#: includes/customizer/class-nandotess-resume-customizer.php:192
+msgid "Main Menu"
 msgstr ""
 
 #: partials/content-none.php:14

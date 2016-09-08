@@ -1,47 +1,71 @@
-@mixin box-sizing($arg) {
-	-webkit-box-sizing: $arg;
-	-moz-box-sizing: $arg;
-	box-sizing: $arg;
+@mixin box-sizing($box-sizing) {
+	-webkit-box-sizing: $box-sizing;
+	-moz-box-sizing: $box-sizing;
+	box-sizing: $box-sizing;
 }
 
-@mixin box-shadow($arg) {
-	-webkit-box-shadow: $arg;
-	-moz-box-shadow: $arg;
-	-o-box-shadow: $arg;
-	box-shadow: $arg;
+@mixin box-shadow($box-shadow) {
+	-webkit-box-shadow: $box-shadow;
+	-moz-box-shadow: $box-shadow;
+	-o-box-shadow: $box-shadow;
+	box-shadow: $box-shadow;
 }
 
-@mixin text-shadow($arg) {
-	-webkit-text-shadow: $arg;
-	-moz-text-shadow: $arg;
-	-o-text-shadow: $arg;
-	text-shadow: $arg;
+@mixin text-shadow($text-shadow) {
+	-webkit-text-shadow: $text-shadow;
+	-moz-text-shadow: $text-shadow;
+	-o-text-shadow: $text-shadow;
+	text-shadow: $text-shadow;
 }
 
-@mixin border-radius($arg) {
-	-webkit-border-radius: $arg;
-	-moz-border-radius: $arg;
-	-o-border-radius: $arg;
-	border-radius: $arg;
+@mixin border-radius($border-radius) {
+	-webkit-border-radius: $border-radius;
+	-moz-border-radius: $border-radius;
+	-o-border-radius: $border-radius;
+	border-radius: $border-radius;
 }
 
-@mixin transition($args...) {
-	-webkit-transition: $args;
-	-moz-transition: $args;
-	-ms-transition: $args;
-	-o-transition: $args;
-	transition: $args;
+@mixin transition($transition...) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-ms-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
 }
 
-@mixin transform($args...) {
-	-webkit-transform: $args;
-	-moz-transform: $args;
-	-ms-transform: $args;
-	-o-transform: $args;
-	transform: $args;
+@mixin transform($transform...) {
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-ms-transform: $transform;
+	-o-transform: $transform;
+	transform: $transform;
 }
 
-@mixin rem-size($property, $arg: 1) {
-	#{$property}: ($arg * 16) * 1px;
-	#{$property}: $arg * 1rem;
+@mixin nav-link($color-text, $font-weight: normal, $text-transform: none) {
+	color: $color-text;
+	font: {
+		size: 15px;
+		weight: $font-weight;
+	}
+	opacity: 0.7;
+	text-transform: $text-transform;
+	@include transition(opacity 500ms ease-in-out, border-bottom 500ms ease-in-out);
+
+	@media (min-width: $screen-sm-min) {
+		border: {
+			bottom: 2px solid transparent;
+			top: 2px solid transparent;
+		}
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: transparent;
+		opacity: 1;
+
+		@media (min-width: $screen-sm-min) {
+			border-bottom-color: $color-text;
+		}
+	}
 }

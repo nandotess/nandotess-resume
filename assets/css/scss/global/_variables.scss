@@ -1,17 +1,19 @@
-/// Devices widths for responsive mixins
-$devices: (
-	mobile-landscape: 480px,
-	tablet: 768px,
-	tablet-landscape: 1024px,
-	laptop: 1280px,
-	desktop: 1440px
-) !default;
-
-/// Grid paddings
-$grid-padding: 20px;
+/// Bootstrap Grid
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
 
 /// Colors
-$color__background-body: white;
-$color__background-screen: #f1f1f1;
+$background_color: white;
 
-$color__text-screen: black;
+/// Colors - Screen
+$screen_background_color: #f1f1f1;
+$screen_text_color: black;
+
+/// Colors - Contact details
+$contact_details_background_color: #1e88e5;
+$contact_details_text_color: black;
+
+/// Colors - Main menu
+$main_menu_background_color: #2196f3;
+$main_menu_text_color: white;

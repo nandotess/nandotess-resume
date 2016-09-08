@@ -11,11 +11,11 @@ if ( ! is_active_sidebar( 'homepage-sidebar' ) ) {
 ?>
 
 <div class="widget-area">
-	<div class="grid">
+	<div class="container">
 		<div class="row">
-			<div class="col-1-1">
+			<div class="col-md-12">
 				<?php dynamic_sidebar( 'homepage-sidebar' ); ?>
 			</div>
 		</div>
 	</div>
-</div><!-- .widget-area -->
+</div>

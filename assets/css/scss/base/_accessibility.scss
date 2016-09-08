@@ -3,17 +3,20 @@
 	clip: rect(1px, 1px, 1px, 1px);
 	height: 1px;
 	overflow: hidden;
-	position: absolute !important;
+	position: absolute;
 	width: 1px;
 
 	&:focus {
-		background-color: $color__background-screen;
+		background-color: $screen_background_color;
 		border-radius: 3px;
 		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-		clip: auto !important;
-		color: $color__text-screen;
+		clip: auto;
+		color: $screen_text_color;
 		display: block;
-		font-weight: bold;
+		font: {
+			weight: bold;
+			size: 14px;
+		}
 		height: auto;
 		left: 5px;
 		line-height: normal;
@@ -22,8 +25,6 @@
 		top: 5px;
 		width: auto;
 		z-index: 100000; /// Above WP toolbar
-
-		@include rem-size(font-size, 0.875);
 	}
 }
 

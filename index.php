@@ -14,8 +14,8 @@ get_header(); ?>
 				get_template_part( 'partials/content', 'none' );
 			?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</main>
+	</div>
 
 <?php
 get_footer();

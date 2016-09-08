@@ -1,9 +1,64 @@
 .header {
-	.contact-details {
+	.navbar-contact-details {
+		background-color: $contact_details_background_color;
+		border: none;
+		border-radius: 0;
+		margin-bottom: 0;
 
+		.navbar-nav {
+			a {
+				@include nav-link($contact_details_text_color, 500);
+
+				.glyphicon {
+					margin-right: 5px;
+				}
+			}
+		}
 	}
 
-	.main-navigation {
-		
+	.navbar-main {
+		background-color: $main_menu_background_color;
+		border: none;
+		border-radius: 0;
+
+		.navbar-header {
+			.navbar-toggle {
+				border-color: $main_menu_text_color;
+				border-radius: 0;
+				border-width: 2px;
+
+				.icon-bar {
+					background-color: $main_menu_text_color;
+					border-radius: 0;
+				}
+			}
+
+			.navbar-nav {
+				float: left;
+				margin: {
+					left: 0;
+					right: 0;
+				}
+
+				li {
+					display: inline-block;
+				}
+
+				a {
+					@include nav-link($main_menu_text_color, 500);
+				}
+			}
+		}
+
+		.navbar-collapse {
+			border-top: none;
+			@include box-shadow(none);
+
+			.navbar-nav {
+				a {
+					@include nav-link($main_menu_text_color, normal, uppercase);
+				}
+			}
+		}
 	}
 }

@@ -1,3 +1,43 @@
 body {
 	background-color: $background_color;
 }
+
+.header {
+	.navbar-contact-details {
+		background-color: $contact_details_background_color;
+
+		.navbar-nav {
+			a {
+				color: $contact_details_text_color;
+
+				&:hover,
+				&:active,
+				&:focus {
+					@media (min-width: $screen-sm-min) {
+						border-bottom-color: $contact_details_text_color;
+					}
+				}
+			}
+		}
+	}
+
+	.navbar-main {
+		background-color: $main_menu_background_color;
+
+		.navbar-collapse {
+			.navbar-nav {
+				a {
+					color: $main_menu_text_color;
+
+					&:hover,
+					&:active,
+					&:focus {
+						@media (min-width: $screen-sm-min) {
+							border-bottom-color: $main_menu_text_color;
+						}
+					}
+				}
+			}
+		}
+	}
+}

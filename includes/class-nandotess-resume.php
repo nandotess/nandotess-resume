@@ -38,6 +38,7 @@ if ( ! class_exists( 'NandotessResume' ) ) :
 			
 			register_nav_menus( array(
 				'primary' => __( 'Primary', 'nandotess-resume' ),
+				'social'  => __( 'Social', 'nandotess-resume' ),
 			) );
 		}
 
@@ -55,8 +56,8 @@ if ( ! class_exists( 'NandotessResume' ) ) :
 				$widget_tags = array(
 					'before_widget' => '<div id="%1$s" class="widget %2$s">',
 					'after_widget'  => '</div>',
-					'before_title'  => '<span class="gamma widget-title">',
-					'after_title'   => '</span>'
+					'before_title'  => '<h2 class="widget-title">',
+					'after_title'   => '</h2>'
 				);
 
 				register_sidebar( $args + $widget_tags );
@@ -67,7 +68,8 @@ if ( ! class_exists( 'NandotessResume' ) ) :
 		 * Enqueue scripts and styles.
 		 */
 		public function scripts() {
-			wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/vendor/font-awesome/css/font-awesome.min.css', array(), '4.6.3' );
+			wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/vendor/bootstrap/css/bootstrap.min.css', array(), NANDOTESS_RESUME_VERSION );
+			wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/vendor/bootstrap/js/bootstrap.min.js', array( 'jquery' ), NANDOTESS_RESUME_VERSION, true );
 			
 			wp_enqueue_style( 'nandotess-resume-style', get_template_directory_uri() . '/assets/css/nandotess-resume.css', array(), NANDOTESS_RESUME_VERSION );
 			wp_style_add_data( 'nandotess-resume-style', 'rtl', 'replace' );
