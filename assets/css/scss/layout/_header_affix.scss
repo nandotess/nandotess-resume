@@ -1,0 +1,22 @@
+.header {
+	.navbar-main {
+		&.affix {
+			top: 0;
+			width: 100%;
+
+			body.admin-bar & {
+				top: 32px;
+
+				@media (max-width: 782px) {
+					top: 46px;
+				}
+			}
+		}
+	}
+}
+
+.content {
+	body.navbar-main-affixed & {
+		padding-top: 54px;
+	}
+}

@@ -1,4 +1,7 @@
 .header {
+	position: relative;
+	z-index: 2;
+	
 	.navbar-contact-details {
 		background-color: $contact_details_background_color;
 		border: none;
@@ -6,7 +9,7 @@
 		margin-bottom: 0;
 
 		.navbar-nav {
-			a {
+			li {
 				@include nav-link($contact_details_text_color, 500);
 
 				.glyphicon {
@@ -20,6 +23,7 @@
 		background-color: $main_menu_background_color;
 		border: none;
 		border-radius: 0;
+		margin-bottom: 0;
 
 		.navbar-header {
 			.navbar-toggle {
@@ -42,9 +46,6 @@
 
 				li {
 					display: inline-block;
-				}
-
-				a {
 					@include nav-link($main_menu_text_color, 500);
 				}
 			}
@@ -55,7 +56,7 @@
 			@include box-shadow(none);
 
 			.navbar-nav {
-				a {
+				li {
 					@include nav-link($main_menu_text_color, normal, uppercase);
 				}
 			}

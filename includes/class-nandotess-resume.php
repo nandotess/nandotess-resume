@@ -73,6 +73,7 @@ if ( ! class_exists( 'NandotessResume' ) ) :
 			
 			wp_enqueue_style( 'nandotess-resume-style', get_template_directory_uri() . '/assets/css/nandotess-resume.css', array(), NANDOTESS_RESUME_VERSION );
 			//wp_style_add_data( 'nandotess-resume-style', 'rtl', 'replace' );
+			wp_enqueue_script( 'nandotess-resume-script', get_template_directory_uri() . '/assets/js/nandotess-resume.min.js', array( 'jquery' ), NANDOTESS_RESUME_VERSION, true );
 			
 			wp_enqueue_script( 'nandotess-resume-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.min.js', array(), NANDOTESS_RESUME_VERSION, true );
 		}

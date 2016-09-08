@@ -42,30 +42,43 @@
 }
 
 @mixin nav-link($color-text, $font-weight: normal, $text-transform: none) {
-	color: $color-text;
-	font: {
-		size: 15px;
-		weight: $font-weight;
-	}
-	opacity: 0.7;
-	text-transform: $text-transform;
-	@include transition(opacity 500ms ease-in-out, border-bottom 500ms ease-in-out);
+	a {
+		color: $color-text;
+		font: {
+			size: 15px;
+			weight: $font-weight;
+		}
+		opacity: 0.7;
+		text-transform: $text-transform;
+		@include transition(opacity 500ms ease-in-out, border-bottom 500ms ease-in-out);
 
-	@media (min-width: $screen-sm-min) {
-		border: {
-			bottom: 2px solid transparent;
-			top: 2px solid transparent;
+		@media (min-width: $screen-sm-min) {
+			border: {
+				bottom: 2px solid transparent;
+				top: 2px solid transparent;
+			}
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: transparent;
+			opacity: 1;
+
+			@media (min-width: $screen-sm-min) {
+				border-bottom-color: $color-text;
+			}
 		}
 	}
 
-	&:hover,
-	&:active,
-	&:focus {
-		background-color: transparent;
-		opacity: 1;
+	&.active {
+		a {
+			background-color: transparent;
+			opacity: 1;
 
-		@media (min-width: $screen-sm-min) {
-			border-bottom-color: $color-text;
+			@media (min-width: $screen-sm-min) {
+				border-bottom-color: $color-text;
+			}
 		}
 	}
 }

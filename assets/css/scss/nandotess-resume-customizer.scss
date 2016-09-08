@@ -7,14 +7,24 @@ body {
 		background-color: $contact_details_background_color;
 
 		.navbar-nav {
-			a {
-				color: $contact_details_text_color;
+			li {
+				a {
+					color: $contact_details_text_color;
 
-				&:hover,
-				&:active,
-				&:focus {
-					@media (min-width: $screen-sm-min) {
-						border-bottom-color: $contact_details_text_color;
+					&:hover,
+					&:active,
+					&:focus {
+						@media (min-width: $screen-sm-min) {
+							border-bottom-color: $contact_details_text_color;
+						}
+					}
+				}
+
+				&.active {
+					a {
+						@media (min-width: $screen-sm-min) {
+							border-bottom-color: $contact_details_text_color;
+						}
 					}
 				}
 			}
@@ -26,14 +36,24 @@ body {
 
 		.navbar-collapse {
 			.navbar-nav {
-				a {
-					color: $main_menu_text_color;
+				li {
+					a {
+						color: $main_menu_text_color;
 
-					&:hover,
-					&:active,
-					&:focus {
-						@media (min-width: $screen-sm-min) {
-							border-bottom-color: $main_menu_text_color;
+						&:hover,
+						&:active,
+						&:focus {
+							@media (min-width: $screen-sm-min) {
+								border-bottom-color: $main_menu_text_color;
+							}
+						}
+					}
+
+					&.active {
+						a {
+							@media (min-width: $screen-sm-min) {
+								border-bottom-color: $main_menu_text_color;
+							}
 						}
 					}
 				}
