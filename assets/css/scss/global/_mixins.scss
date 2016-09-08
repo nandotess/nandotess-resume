@@ -48,7 +48,7 @@
 			size: 15px;
 			weight: $font-weight;
 		}
-		opacity: 0.7;
+		opacity: 0.85;
 		text-transform: $text-transform;
 		@include transition(opacity 500ms ease-in-out, border-bottom 500ms ease-in-out);
 

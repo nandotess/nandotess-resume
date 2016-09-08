@@ -32,9 +32,11 @@
 
 		.navbar-header {
 			.navbar-toggle {
-				border-color: $main_menu_text_color;
-				border-radius: 0;
-				border-width: 2px;
+				border: {
+					color: $main_menu_text_color;
+					radius: 0;
+					width: 2px;
+				}
 
 				.icon-bar {
 					background-color: $main_menu_text_color;
