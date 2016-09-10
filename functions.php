@@ -32,8 +32,8 @@ $nandotess_resume = (object) array(
 	/**
 	 * Initialize all the things.
 	 */
-	'main'       => require 'inc/class-nandotess-resume.php',
-	'customizer' => require 'inc/customizer/class-storefront-customizer.php',
+	'main'       => require 'includes/class-nandotess-resume.php',
+	'customizer' => require 'includes/customizer/class-nandotess-resume-customizer.php',
 );
 
 require 'includes/nandotess-resume-template-hooks.php';
