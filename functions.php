@@ -27,10 +27,5 @@ if ( ! isset( $content_width ) ) {
  */
 require 'includes/class-nandotess-resume.php';
 require 'includes/customizer/class-nandotess-resume-customizer.php';
-//require 'includes/nandotess-resume-functions.php';
-//require 'includes/nandotess-resume-template-hooks.php';
-//require 'includes/nandotess-resume-template-functions.php';
-
-//if ( is_admin() ) {
-//	require 'includes/admin/class-nandotess-resume-admin.php';
-//}
+require 'includes/nandotess-resume-template-hooks.php';
+require 'includes/nandotess-resume-template-functions.php';

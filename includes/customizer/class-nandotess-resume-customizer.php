@@ -277,40 +277,40 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 			) ) );
 
 			/**
-			 * Section Skills
+			 * Social menu
 			 */
-			$wp_customize->add_section( 'nandotess_resume_section_skills' , array(
-				'title'      			=> __( 'Section Skills', 'nandotess-resume' ),
+			$wp_customize->add_section( 'nandotess_resume_social_men' , array(
+				'title'      			=> __( 'Social Menu', 'nandotess-resume' ),
 				'priority'   			=> 29,
 			) );
 
 			/**
-			 * Section Skills: Background Color
+			 * Social menu: Background Color
 			 */
-			$wp_customize->add_setting( 'nandotess_resume_section_skills_background_color', array(
-				'default'           	=> '#2196f3',
-				'sanitize_callback' 	=> 'sanitize_hex_color',
-			) );
-
-			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nandotess_resume_section_skills_background_color', array(
-				'label'	   				=> __( 'Background color', 'nandotess-resume' ),
-				'section'  				=> 'nandotess_resume_section_skills',
-				'settings' 				=> 'nandotess_resume_section_skills_background_color',
-				'priority' 				=> 1,
-			) ) );
-
-			/**
-			 * Section Skills: Text Color
-			 */
-			$wp_customize->add_setting( 'nandotess_resume_section_skills_text_color', array(
+			$wp_customize->add_setting( 'nandotess_resume_social_menu_background_color', array(
 				'default'           	=> '#ffffff',
 				'sanitize_callback' 	=> 'sanitize_hex_color',
 			) );
 
-			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nandotess_resume_section_skills_text_color', array(
-				'label'	   				=> __( 'Text color', 'nandotess-resume' ),
-				'section'  				=> 'nandotess_resume_section_skills',
-				'settings' 				=> 'nandotess_resume_section_skills_text_color',
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nandotess_resume_social_menu_background_color', array(
+				'label'	   				=> __( 'Background color', 'nandotess-resume' ),
+				'section'  				=> 'nandotess_resume_social_men',
+				'settings' 				=> 'nandotess_resume_social_menu_background_color',
+				'priority' 				=> 1,
+			) ) );
+
+			/**
+			 * Social menu: Link Color
+			 */
+			$wp_customize->add_setting( 'nandotess_resume_social_menu_link_color', array(
+				'default'           	=> '#2196f3',
+				'sanitize_callback' 	=> 'sanitize_hex_color',
+			) );
+
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nandotess_resume_social_menu_link_color', array(
+				'label'	   				=> __( 'Link color', 'nandotess-resume' ),
+				'section'  				=> 'nandotess_resume_social_men',
+				'settings' 				=> 'nandotess_resume_social_menu_link_color',
 				'priority' 				=> 2,
 			) ) );
 		}
@@ -330,7 +330,7 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 		 * @return array $theme_mods theme mods
 		 */
 		public function get_theme_mods() {
-			return array(
+			return apply_filters( 'nandotess_resume_sass_variables', array(
 				'screen-sm-min'                    => '768px',
 				'screen-md-min'                    => '992px',
 				'screen-lg-min'                    => '1200px',
@@ -342,9 +342,9 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 				'section_about_background_color'   => get_theme_mod( 'nandotess_resume_section_about_background_color' ),
 				'section_about_text_color'         => get_theme_mod( 'nandotess_resume_section_about_text_color' ),
 				'section_about_link_color'         => get_theme_mod( 'nandotess_resume_section_about_link_color' ),
-				'section_skills_background_color'  => get_theme_mod( 'nandotess_resume_section_skills_background_color' ),
-				'section_skills_text_color'        => get_theme_mod( 'nandotess_resume_section_skills_text_color' ),
-			);
+				'social_menu_background_color'     => get_theme_mod( 'nandotess_resume_social_menu_background_color' ),
+				'social_menu_link_color'           => get_theme_mod( 'nandotess_resume_social_menu_link_color' ),
+			) );
 		}
 
 		/**
@@ -367,7 +367,7 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 				}
 
 				if ( $wp_filesystem ) {
-					$scss = $wp_filesystem->get_contents( $scss_file );
+					$scss = apply_filters( 'nandotess_resume_sass_content', $wp_filesystem->get_contents( $scss_file ) );
 					$scssphp_file = get_template_directory() .'/vendor/leafo/scssphp/scss.inc.php';
 
 					if ( ! empty( $scss ) && file_exists( $scssphp_file ) ) {

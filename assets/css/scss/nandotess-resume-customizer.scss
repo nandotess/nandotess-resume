@@ -2,7 +2,7 @@ body {
 	background-color: $background_color;
 }
 
-.header {
+.site-header {
 	.navbar-contact-details {
 		background-color: $contact_details_background_color;
 
@@ -90,12 +90,26 @@ body {
 			}
 		}
 	}
+}
 
-	&.skills {
-		color: $section_skills_text_color;
+.site-footer {
+	.col-md-12 {
+		background-color: $social_menu_background_color;
+	}
 
-		.col-md-12 {
-			background-color: $section_skills_background_color;
+	.navbar-nav {
+		li {
+			a {
+				color: $social_menu_link_color;
+
+				&:hover,
+				&:active,
+				&:focus {
+					@media (min-width: $screen-sm-min) {
+						border-bottom-color: $social_menu_link_color;
+					}
+				}
+			}
 		}
 	}
 }

@@ -15,10 +15,6 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: header.php:17
-msgid "Skip to content"
-msgstr ""
-
 #: includes/class-nandotess-resume.php:40
 msgid "Primary"
 msgstr ""
@@ -47,7 +43,7 @@ msgstr ""
 msgid "Contact Details"
 msgstr ""
 
-#: includes/customizer/class-nandotess-resume-customizer.php:138, includes/customizer/class-nandotess-resume-customizer.php:220, includes/customizer/class-nandotess-resume-customizer.php:258, includes/customizer/class-nandotess-resume-customizer.php:311
+#: includes/customizer/class-nandotess-resume-customizer.php:138, includes/customizer/class-nandotess-resume-customizer.php:220, includes/customizer/class-nandotess-resume-customizer.php:258
 msgid "Text color"
 msgstr ""
 
@@ -67,12 +63,16 @@ msgstr ""
 msgid "Section About"
 msgstr ""
 
-#: includes/customizer/class-nandotess-resume-customizer.php:273
+#: includes/customizer/class-nandotess-resume-customizer.php:273, includes/customizer/class-nandotess-resume-customizer.php:311
 msgid "Link color"
 msgstr ""
 
 #: includes/customizer/class-nandotess-resume-customizer.php:283
-msgid "Section Skills"
+msgid "Social Menu"
+msgstr ""
+
+#: includes/nandotess-resume-template-functions.php:20
+msgid "Skip to content"
 msgstr ""
 
 #: partials/content-none.php:13

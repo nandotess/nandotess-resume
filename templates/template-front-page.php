@@ -1,6 +1,8 @@
 <?php
 /**
- * The main template file.
+ * The template for displaying the homepage
+ *
+ * Template Name: Homepage
  *
  * @package nandotess-resume
  */
@@ -12,7 +14,10 @@ get_header();
 		<main id="main" class="site-main" role="main">
 			
 			<?php
-				get_template_part( 'partials/content', 'none' );
+				while ( have_posts() ) {
+					the_post();
+					get_template_part( 'partials/content', 'front-page' );
+				}
 			?>
 
 		</main>

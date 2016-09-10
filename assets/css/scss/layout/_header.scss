@@ -1,14 +1,14 @@
-.header {
+.site-header {
 	position: relative;
 	z-index: 2;
 	
 	.navbar-contact-details {
 		background-color: $contact_details_background_color;
 		border: none;
-		border-radius: 0;
 		margin-bottom: 0;
 		max-height: 54px;
 		text-align: center;
+		@include border-radius(0);
 
 		.navbar-nav {
 			display: inline-block;
@@ -27,8 +27,8 @@
 	.navbar-main {
 		background-color: $main_menu_background_color;
 		border: none;
-		border-radius: 0;
 		margin-bottom: 0;
+		@include border-radius(0);
 
 		.navbar-header {
 			.navbar-toggle {
@@ -40,7 +40,7 @@
 
 				.icon-bar {
 					background-color: $main_menu_text_color;
-					border-radius: 0;
+					@include border-radius(0);
 				}
 			}
 

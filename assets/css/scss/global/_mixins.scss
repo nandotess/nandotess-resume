@@ -50,7 +50,7 @@
 		}
 		opacity: 0.85;
 		text-transform: $text-transform;
-		@include transition(opacity 500ms ease-in-out, border-bottom 500ms ease-in-out);
+		@include transition(opacity 300ms ease-in-out, border-bottom 300ms ease-in-out);
 
 		@media (min-width: $screen-sm-min) {
 			border: {

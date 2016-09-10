@@ -7,16 +7,17 @@
 ?>
 			</div>
 
-			<footer id="footer" class="footer">
+			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
 							<?php
-								wp_nav_menu( array(
-									'theme_location' => 'social',
-									'menu_class' => 'nav navbar-nav',
-									'container' => false,
-								) );
+								/**
+								 * Functions hooked into nandotess_resume_footer action
+								 *
+								 * @hooked nandotess_resume_footer_nav_social - 10
+								 */
+								do_action( 'nandotess_resume_footer' );
 							?>
 						</div>
 					</div>

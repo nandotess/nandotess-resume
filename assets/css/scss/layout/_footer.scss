@@ -1,3 +1,83 @@
-.footer {
+.site-footer {
+	padding-top: 30px;
+		
+	.col-md-12 {
+		background-color: $social_menu_background_color;
+		padding: 30px 20px;
+		text-align: center;
 
+		@media (min-width: $screen-sm-min) {
+			padding: 40px;
+		}
+	}
+
+	.navbar-nav {
+		display: inline-block;
+		float: none;
+
+		li {
+			display: inline-block;
+			margin-right: 10px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			a {
+				color: $social_menu_link_color;
+				height: 40px;
+				opacity: 0.85;
+				overflow: hidden;
+				padding: 0;
+				width: 40px;
+				@include transition(opacity 300ms ease-in-out);
+
+				&:hover,
+				&:active,
+				&:focus {
+					background-color: transparent;
+					opacity: 1;
+
+					@media (min-width: $screen-sm-min) {
+						border-bottom-color: $social_menu_link_color;
+					}
+				}
+
+				&:before {
+					display: block;
+					font: {
+						family: 'FontAwesome';
+						size: 40px;
+						weight: normal;
+						variant: normal;
+					}
+					line-height: 1;
+				}
+
+				&[href*="facebook.com"]:before {
+					content: "\f230";
+				}
+
+				&[href*="twitter.com"]:before {
+					content: "\f099";
+				}
+
+				&[href*="plus.google.com"]:before {
+					content: "\f0d5";
+				}
+
+				&[href*="instagram.com"]:before {
+					content: "\f16d";
+				}
+
+				&[href*="linkedin.com"]:before {
+					content: "\f0e1";
+				}
+
+				&[href*="github.com"]:before {
+					content: "\f09b";
+				}
+			}
+		}
+	}
 }

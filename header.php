@@ -13,36 +13,26 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-		<div class="page">
-			<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'nandotess-resume' ); ?></a>
+		<div id="page" class="hfeed site">
+			<?php
+				/**
+				 * Functions hooked into nandotess_resume_before_header action
+				 *
+				 * @hooked nandotess_resume_header_skip_links - 0
+				 */
+				do_action( 'nandotess_resume_before_header' );
+			?>
 
-			<header id="header" class="header">
-				<?php get_template_part( 'partials/content', 'header-contact-details-desktop' ); ?>
-
-				<nav class="navbar navbar-main">
-					<div class="container">
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main" aria-expanded="false">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-
-							<?php get_template_part( 'partials/content', 'header-contact-details-mobile' ); ?>
-						</div>
-
-						<div class="collapse navbar-collapse" id="navbar-main">
-							<?php
-								wp_nav_menu( array(
-									'theme_location' => 'primary',
-									'menu_class' => 'nav navbar-nav',
-									'container' => false,
-								) );
-							?>
-						</div>
-					</div>
-				</nav>
+			<header id="masthead" class="site-header" role="banner">
+				<?php
+					/**
+					 * Functions hooked into nandotess_resume_header action
+					 *
+					 * @hooked nandotess_resume_header_nav_contact_details - 0
+					 * @hooked nandotess_resume_header_nav_main - 0
+					 */
+					do_action( 'nandotess_resume_header' );
+				?>
 			</header>
 
-			<div id="content" class="content">
+			<div id="content" class="site-content" tabindex="-1">

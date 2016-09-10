@@ -6,7 +6,7 @@ $screen-lg-min: 1200px;
 /// Colors
 $background_color: white;
 
-/// Colors - Screen
+/// Colors - Skip Links
 $screen_background_color: #f1f1f1;
 $screen_text_color: black;
 
@@ -18,10 +18,11 @@ $contact_details_text_color: black;
 $main_menu_background_color: #2196f3;
 $main_menu_text_color: white;
 
-/// Colors - Homepage section
+/// Colors - Homepage section - About
 $section_about_background_color: white;
 $section_about_text_color: #646464;
 $section_about_link_color: #2196f3;
 
-$section_skills_background_color: #2196f3;
-$section_skills_text_color: white;
+/// Colors - Main menu
+$social_menu_background_color: white;
+$social_menu_link_color: #2196f3;

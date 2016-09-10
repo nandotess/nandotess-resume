@@ -34,3 +34,16 @@ a {
 		text-decoration: none;
 	}
 }
+
+.site {
+	padding-bottom: 20px;
+
+	@media (min-width: $screen-sm-min) {
+		padding-bottom: 40px;
+	}
+
+	@media (min-width: $screen-md-min) {
+		padding-bottom: 60px;
+	}
+}
+
