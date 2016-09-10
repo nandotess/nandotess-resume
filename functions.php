@@ -1,8 +1,10 @@
 <?php
 /**
- * Engine room
+ * Disneyland
  *
- * @package nandotess-resume
+ * @author   Fernando Tessmann
+ * @since    1.0.0
+ * @package  nandotess-resume
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,8 +14,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Theme version
  */
-$theme = wp_get_theme( 'nandotess-resume' );
-define( 'NANDOTESS_RESUME_VERSION', $theme['Version'] );
+$theme                    = wp_get_theme( 'nandotess-resume' );
+$nandotess_resume_version = $theme['Version'];
 
 /**
  * Content width
@@ -25,7 +27,14 @@ if ( ! isset( $content_width ) ) {
 /**
  * Where Dreams Come True
  */
-require 'includes/class-nandotess-resume.php';
-require 'includes/customizer/class-nandotess-resume-customizer.php';
+$nandotess_resume = (object) array(
+	'version' => $nandotess_resume_version,
+	/**
+	 * Initialize all the things.
+	 */
+	'main'       => require 'inc/class-nandotess-resume.php',
+	'customizer' => require 'inc/customizer/class-storefront-customizer.php',
+);
+
 require 'includes/nandotess-resume-template-hooks.php';
 require 'includes/nandotess-resume-template-functions.php';

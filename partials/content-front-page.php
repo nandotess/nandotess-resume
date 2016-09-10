@@ -2,7 +2,9 @@
 /**
  * The template used for displaying page content in template-front-page.php
  *
- * @package nandotess-resume
+ * @author   Fernando Tessmann
+ * @since    1.0.0
+ * @package  nandotess-resume
  */
 ?>
 

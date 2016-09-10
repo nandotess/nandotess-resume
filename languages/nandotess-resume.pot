@@ -15,70 +15,74 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: includes/class-nandotess-resume.php:40
+#: includes/class-nandotess-resume.php:46
 msgid "Primary"
 msgstr ""
 
-#: includes/class-nandotess-resume.php:41
+#: includes/class-nandotess-resume.php:47
 msgid "Social"
 msgstr ""
 
-#: includes/class-nandotess-resume.php:50
+#: includes/class-nandotess-resume.php:59
 msgid "Homepage"
 msgstr ""
 
-#: includes/class-nandotess-resume.php:52
+#: includes/class-nandotess-resume.php:61
 msgid "Add homepage widgets here."
 msgstr ""
 
-#: includes/customizer/class-nandotess-resume-customizer.php:87
+#: includes/customizer/class-nandotess-resume-customizer.php:92
 msgid "Background"
 msgstr ""
 
-#: includes/customizer/class-nandotess-resume-customizer.php:100, includes/customizer/class-nandotess-resume-customizer.php:123, includes/customizer/class-nandotess-resume-customizer.php:205, includes/customizer/class-nandotess-resume-customizer.php:243, includes/customizer/class-nandotess-resume-customizer.php:296
+#: includes/customizer/class-nandotess-resume-customizer.php:105, includes/customizer/class-nandotess-resume-customizer.php:128, includes/customizer/class-nandotess-resume-customizer.php:210, includes/customizer/class-nandotess-resume-customizer.php:248, includes/customizer/class-nandotess-resume-customizer.php:301
 msgid "Background color"
 msgstr ""
 
-#: includes/customizer/class-nandotess-resume-customizer.php:110
+#: includes/customizer/class-nandotess-resume-customizer.php:115
 msgid "Contact Details"
 msgstr ""
 
-#: includes/customizer/class-nandotess-resume-customizer.php:138, includes/customizer/class-nandotess-resume-customizer.php:220, includes/customizer/class-nandotess-resume-customizer.php:258
+#: includes/customizer/class-nandotess-resume-customizer.php:143, includes/customizer/class-nandotess-resume-customizer.php:225, includes/customizer/class-nandotess-resume-customizer.php:263
 msgid "Text color"
 msgstr ""
 
-#: includes/customizer/class-nandotess-resume-customizer.php:153
+#: includes/customizer/class-nandotess-resume-customizer.php:158
 msgid "Phone"
 msgstr ""
 
-#: includes/customizer/class-nandotess-resume-customizer.php:175
+#: includes/customizer/class-nandotess-resume-customizer.php:180
 msgid "Mail"
 msgstr ""
 
-#: includes/customizer/class-nandotess-resume-customizer.php:192
+#: includes/customizer/class-nandotess-resume-customizer.php:197
 msgid "Main Menu"
 msgstr ""
 
-#: includes/customizer/class-nandotess-resume-customizer.php:230
+#: includes/customizer/class-nandotess-resume-customizer.php:235
 msgid "Section About"
 msgstr ""
 
-#: includes/customizer/class-nandotess-resume-customizer.php:273, includes/customizer/class-nandotess-resume-customizer.php:311
+#: includes/customizer/class-nandotess-resume-customizer.php:278, includes/customizer/class-nandotess-resume-customizer.php:316
 msgid "Link color"
 msgstr ""
 
-#: includes/customizer/class-nandotess-resume-customizer.php:283
+#: includes/customizer/class-nandotess-resume-customizer.php:288
 msgid "Social Menu"
 msgstr ""
 
-#: includes/nandotess-resume-template-functions.php:20
+#: includes/nandotess-resume-template-functions.php:23
 msgid "Skip to content"
 msgstr ""
 
-#: partials/content-none.php:13
+#: includes/nandotess-resume-template-functions.php:87
+msgid "Toggle navigation"
+msgstr ""
+
+#: partials/content-none.php:15
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: partials/content-none.php:14
+#: partials/content-none.php:16
 msgid "It looks like nothing was found at this location."
 msgstr ""

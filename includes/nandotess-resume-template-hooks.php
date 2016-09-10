@@ -2,7 +2,9 @@
 /**
  * nandotess's resume hooks
  *
- * @package nandotess-resume
+ * @author   Fernando Tessmann
+ * @since    1.0.0
+ * @package  nandotess-resume
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

@@ -2,7 +2,9 @@
 /**
  * nandotess's resume Customizer Class
  *
- * @package nandotess-resume
+ * @author   Fernando Tessmann
+ * @since    1.0.0
+ * @package  nandotess-resume
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,12 +14,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 	
 	/**
-	 * The Storefront Customizer class
+	 * The nandotess's resume Customizer class
 	 */
 	class NandotessResume_Customizer {
 		
 		/**
-		 * Setup class.
+		 * Setup class
 		 */
 		public function __construct() {
 			add_action( 'after_setup_theme',    array( $this, 'remove_custom_background' ) );
@@ -29,8 +31,9 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 		}
 
 		/**
-		 * Remove custom WordPress background.
+		 * Remove custom WordPress background
 		 *
+		 * @since  1.0.0
 		 * @return void
 		 */
 		public function remove_custom_background() {
@@ -39,8 +42,9 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 		
 		/**
 		 * Add CSS in <head> for styles handled by the theme customizer
-		 * If the Customizer is active pull in the raw css. Otherwise pull in the prepared theme_mods if they exist.
+		 * If the Customizer is active pull in the raw css. Otherwise pull in the prepared theme_mods if they exist
 		 *
+		 * @since  1.0.0
 		 * @return void
 		 */
 		public function add_inline_css() {
@@ -54,9 +58,10 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 		}
 		
 		/**
-		 * Add postMessage support for site title and description for the Theme Customizer along with several other settings.
+		 * Add postMessage support for site title and description for the Theme Customizer along with several other settings
 		 *
-		 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+		 * @param WP_Customize_Manager $wp_customize Theme Customizer object
+		 * @since  1.0.0
 		 * @return void
 		 */
 		public function customize_register( $wp_customize ) {
@@ -316,8 +321,9 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 		}
 		
 		/**
-		 * Assign styles to individual theme mods.
+		 * Assign styles to individual theme mods
 		 *
+		 * @since  1.0.0
 		 * @return void
 		 */
 		public function set_theme_mod_style() {
@@ -325,8 +331,9 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 		}
 		
 		/**
-		 * Get all of the theme mods.
+		 * Get all of the theme mods
 		 *
+		 * @since  1.0.0
 		 * @return array $theme_mods theme mods
 		 */
 		public function get_theme_mods() {
@@ -348,8 +355,9 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 		}
 
 		/**
-		 * Get Customizer css.
+		 * Get Customizer css
 		 *
+		 * @since  1.0.0
 		 * @see get_theme_mods()
 		 * @return string $css the css
 		 */

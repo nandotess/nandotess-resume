@@ -2,7 +2,9 @@
 /**
  * The footer
  *
- * @package nandotess-resume
+ * @author   Fernando Tessmann
+ * @since    1.0.0
+ * @package  nandotess-resume
  */
 ?>
 			</div>

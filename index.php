@@ -1,8 +1,10 @@
 <?php
 /**
- * The main template file.
+ * The main template file
  *
- * @package nandotess-resume
+ * @author   Fernando Tessmann
+ * @since    1.0.0
+ * @package  nandotess-resume
  */
 
 get_header();
@@ -10,11 +12,7 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			
-			<?php
-				get_template_part( 'partials/content', 'none' );
-			?>
-
+			<?php get_template_part( 'partials/content', 'none' ); ?>
 		</main>
 	</div>
 

@@ -2,7 +2,9 @@
 /**
  * nandotess's resume functions
  *
- * @package nandotess-resume
+ * @author   Fernando Tessmann
+ * @since    1.0.0
+ * @package  nandotess-resume
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -11,9 +13,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! function_exists( 'nandotess_resume_header_skip_links' ) ) {
 	/**
-	 * Display the skip to content link
+	 * Skip links
 	 *
 	 * @since  1.0.0
+	 * @return void
 	 */
 	function nandotess_resume_header_skip_links() {
 		?>
@@ -24,13 +27,14 @@ if ( ! function_exists( 'nandotess_resume_header_skip_links' ) ) {
 
 if ( ! function_exists( 'nandotess_resume_header_nav_contact_details' ) ) {
 	/**
-	 * Display the contact details menu
+	 * Contact details menu
 	 *
 	 * @since  1.0.0
+	 * @return void
 	 */
 	function nandotess_resume_header_nav_contact_details( $device ) {
-		$mail  = get_theme_mod( 'nandotess_resume_mail', 'mail@mail.com' );
-		$phone = get_theme_mod( 'nandotess_resume_phone', '+0000 0000 0000' );
+		$mail          = get_theme_mod( 'nandotess_resume_mail', 'mail@mail.com' );
+		$phone         = get_theme_mod( 'nandotess_resume_phone', '+0000 0000 0000' );
 		$phone_numbers = preg_replace( '/\D/', '', $phone );
 
 		if ( $mail || $phone_numbers || is_customize_preview() ) :
@@ -38,25 +42,25 @@ if ( ! function_exists( 'nandotess_resume_header_nav_contact_details' ) ) {
 				?>
 				<ul class="nav navbar-nav hidden visible-xs">
 					<?php if ( $phone_numbers || is_customize_preview() ) : ?>
-						<li><a class="phone" href="tel:<?php echo $phone_numbers; /* WPCS: xss ok. */ ?>"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></a></li>
+						<li><a class="phone" href="tel:<?php echo esc_html( $phone_numbers ); ?>"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></a></li>
 					<?php endif; ?>
 
 					<?php if ( $mail || is_customize_preview() ) : ?>
-						<li><a class="mail" href="mailto:<?php echo $mail; /* WPCS: xss ok. */ ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
+						<li><a class="mail" href="mailto:<?php echo esc_html( $mail ); ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
 					<?php endif; ?>
 				</ul>
 				<?php
 			else :
 				?>
 				<nav class="navbar navbar-contact-details hidden-xs">
-					<div class="container">
+					<div class="container-fluid">
 						<ul class="nav navbar-nav">
 							<?php if ( $phone_numbers || is_customize_preview() ) : ?>
-								<li><a class="phone" href="tel:<?php echo $phone_numbers; /* WPCS: xss ok. */ ?>"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> <span class="text"><?php echo $phone; /* WPCS: xss ok. */ ?></span></a></li>
+								<li><a class="phone" href="tel:<?php echo esc_html( $phone_numbers ); ?>"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> <span class="text"><?php echo esc_html( $phone ); ?></span></a></li>
 							<?php endif; ?>
 
 							<?php if ( $mail || is_customize_preview() ) : ?>
-								<li><a class="mail" href="mailto:<?php echo $mail; /* WPCS: xss ok. */ ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <span class="text"><?php echo $mail; /* WPCS: xss ok. */ ?></span></a></li>
+								<li><a class="mail" href="mailto:<?php echo esc_html( $mail ); ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <span class="text"><?php echo esc_html( $mail ); ?></span></a></li>
 							<?php endif; ?>
 						</ul>
 					</div>
@@ -69,17 +73,18 @@ if ( ! function_exists( 'nandotess_resume_header_nav_contact_details' ) ) {
 
 if ( ! function_exists( 'nandotess_resume_header_nav_main' ) ) {
 	/**
-	 * Display the main menu
+	 * Main menu
 	 *
 	 * @since  1.0.0
+	 * @return void
 	 */
 	function nandotess_resume_header_nav_main() {
 		?>
 		<nav class="navbar navbar-main">
-			<div class="container">
+			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main" aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span>
+						<span class="sr-only"><?php esc_html_e( 'Toggle navigation', 'nandotess-resume' ); ?></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -105,9 +110,10 @@ if ( ! function_exists( 'nandotess_resume_header_nav_main' ) ) {
 
 if ( ! function_exists( 'nandotess_resume_homepage_content' ) ) {
 	/**
-	 * Display the homepage content
+	 * Homepage content
 	 *
 	 * @since  1.0.0
+	 * @return void
 	 */
 	function nandotess_resume_homepage_content() {
 		?>
@@ -135,14 +141,7 @@ if ( ! function_exists( 'nandotess_resume_homepage_content' ) ) {
 							<?php the_content(); ?>
 						</div>
 
-						<?php
-							/**
-							 * Functions hooked in to nandotess_resume_section_about_bottom add_action
-							 *
-							 * @hooked nandotess_resume_homepage_content - 10
-							 */
-							do_action( 'nandotess_resume_section_about_bottom' );
-						?>
+						<?php do_action( 'nandotess_resume_section_about_bottom' ); ?>
 					</div>
 				</div>
 			</div>
@@ -153,9 +152,10 @@ if ( ! function_exists( 'nandotess_resume_homepage_content' ) ) {
 
 if ( ! function_exists( 'nandotess_resume_homepage_widgets' ) ) {
 	/**
-	 * Display the homepage widgets sidebar
+	 * Homepage widgets sidebar
 	 *
 	 * @since  1.0.0
+	 * @return void
 	 */
 	function nandotess_resume_homepage_widgets() {
 		?>
@@ -172,9 +172,10 @@ if ( ! function_exists( 'nandotess_resume_homepage_widgets' ) ) {
 
 if ( ! function_exists( 'nandotess_resume_footer_nav_social' ) ) {
 	/**
-	 * Display the social menu
+	 * Social menu
 	 *
 	 * @since  1.0.0
+	 * @return void
 	 */
 	function nandotess_resume_footer_nav_social() {
 		wp_nav_menu( array(

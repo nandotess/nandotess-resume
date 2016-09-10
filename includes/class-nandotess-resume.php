@@ -2,7 +2,9 @@
 /**
  * nandotess's resume Class
  *
- * @package nandotess-resume
+ * @author   Fernando Tessmann
+ * @since    1.0.0
+ * @package  nandotess-resume
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,14 +14,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! class_exists( 'NandotessResume' ) ) :
 	
 	/**
-	 * The main NandotessResume class
+	 * The main nandotess's resume class
 	 */
 	class NandotessResume {
 		
-		private static $structured_data;
-		
 		/**
-		 * Setup class.
+		 * Setup class
+		 *
+		 * @since  1.0.0
+		 * @return void
 		 */
 		public function __construct() {
 			add_action( 'after_setup_theme',  array( $this, 'setup' ) );
@@ -28,7 +31,10 @@ if ( ! class_exists( 'NandotessResume' ) ) :
 		}
 		
 		/**
-		 * Sets up theme defaults and registers support for various WordPress features.
+		 * Sets up theme defaults and registers support for various WordPress features
+		 *
+		 * @since  1.0.0
+		 * @return void
 		 */
 		public function setup() {
 			load_theme_textdomain( 'nandotess-resume', get_template_directory() . '/languages' );
@@ -43,7 +49,10 @@ if ( ! class_exists( 'NandotessResume' ) ) :
 		}
 
 		/**
-		 * Register widget area.
+		 * Register widget area
+		 *
+		 * @since  1.0.0
+		 * @return void
 		 */
 		public function widgets_init() {
 			$sidebar_args['homepage'] = array(
@@ -65,18 +74,23 @@ if ( ! class_exists( 'NandotessResume' ) ) :
 		}
 
 		/**
-		 * Enqueue scripts and styles.
+		 * Enqueue scripts and styles
+		 *
+		 * @since  1.0.0
+		 * @return void
 		 */
 		public function scripts() {
-			wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/vendor/bootstrap/css/bootstrap.min.css', array(), NANDOTESS_RESUME_VERSION );
-			wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/vendor/bootstrap/js/bootstrap.min.js', array( 'jquery' ), NANDOTESS_RESUME_VERSION, true );
-			
-			wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/vendor/font-awesome/css/font-awesome.min.css', array(), NANDOTESS_RESUME_VERSION );
+			global $nandotess_resume_version;
 
-			wp_enqueue_style( 'nandotess-resume-style', get_template_directory_uri() . '/assets/css/nandotess-resume.css', array(), NANDOTESS_RESUME_VERSION );
-			wp_enqueue_script( 'nandotess-resume-script', get_template_directory_uri() . '/assets/js/nandotess-resume.min.js', array( 'jquery' ), NANDOTESS_RESUME_VERSION, true );
+			wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/vendor/bootstrap/css/bootstrap.min.css', array(), $nandotess_resume_version );
+			wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/vendor/bootstrap/js/bootstrap.min.js', array( 'jquery' ), $nandotess_resume_version, true );
 			
-			wp_enqueue_script( 'nandotess-resume-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.min.js', array(), NANDOTESS_RESUME_VERSION, true );
+			wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/vendor/font-awesome/css/font-awesome.min.css', array(), $nandotess_resume_version );
+
+			wp_enqueue_style( 'nandotess-resume-style', get_template_directory_uri() . '/assets/css/nandotess-resume.css', array(), $nandotess_resume_version );
+			wp_enqueue_script( 'nandotess-resume-script', get_template_directory_uri() . '/assets/js/nandotess-resume.min.js', array( 'jquery' ), $nandotess_resume_version, true );
+			
+			wp_enqueue_script( 'nandotess-resume-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.min.js', array(), $nandotess_resume_version, true );
 		}
 
 	}

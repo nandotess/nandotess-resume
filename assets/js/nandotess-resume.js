@@ -1,5 +1,9 @@
 /**
  * nandotess-resume.js
+ *
+ * @author   Fernando Tessmann
+ * @since    1.0.0
+ * @package  nandotess-resume
  */
 (function($) {
 

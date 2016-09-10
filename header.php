@@ -2,7 +2,9 @@
 /**
  * The header
  *
- * @package nandotess-resume
+ * @author   Fernando Tessmann
+ * @since    1.0.0
+ * @package  nandotess-resume
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
