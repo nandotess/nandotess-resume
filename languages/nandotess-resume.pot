@@ -31,43 +31,43 @@ msgstr ""
 msgid "Add homepage widgets here."
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:92
+#: includes/customizer/class-nr-customizer.php:93
 msgid "Background"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:105, includes/customizer/class-nr-customizer.php:128, includes/customizer/class-nr-customizer.php:210, includes/customizer/class-nr-customizer.php:248, includes/customizer/class-nr-customizer.php:301
+#: includes/customizer/class-nr-customizer.php:106, includes/customizer/class-nr-customizer.php:129, includes/customizer/class-nr-customizer.php:211, includes/customizer/class-nr-customizer.php:249, includes/customizer/class-nr-customizer.php:302
 msgid "Background color"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:115
+#: includes/customizer/class-nr-customizer.php:116
 msgid "Contact Details"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:143, includes/customizer/class-nr-customizer.php:225, includes/customizer/class-nr-customizer.php:263
+#: includes/customizer/class-nr-customizer.php:144, includes/customizer/class-nr-customizer.php:226, includes/customizer/class-nr-customizer.php:264
 msgid "Text color"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:158
+#: includes/customizer/class-nr-customizer.php:159
 msgid "Phone"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:180
+#: includes/customizer/class-nr-customizer.php:181
 msgid "Mail"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:197
+#: includes/customizer/class-nr-customizer.php:198
 msgid "Main Menu"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:235
+#: includes/customizer/class-nr-customizer.php:236
 msgid "Section About"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:278, includes/customizer/class-nr-customizer.php:316
+#: includes/customizer/class-nr-customizer.php:279, includes/customizer/class-nr-customizer.php:317
 msgid "Link color"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:288
+#: includes/customizer/class-nr-customizer.php:289
 msgid "Social Menu"
 msgstr ""
 

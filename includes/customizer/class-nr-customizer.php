@@ -23,7 +23,7 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 		 */
 		public function __construct() {
 			add_action( 'after_setup_theme',    array( $this, 'remove_custom_background' ) );
-			add_action( 'wp_enqueue_scripts',   array( $this, 'add_inline_css' ), 130 );
+			add_action( 'wp_footer',            array( $this, 'add_inline_css' ) );
 			add_action( 'customize_register',   array( $this, 'customize_register' ) );
 			
 			add_action( 'after_switch_theme',   array( $this, 'set_theme_mod_style' ) );
@@ -41,19 +41,20 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 		}
 		
 		/**
-		 * Add CSS in <head> for styles handled by the theme customizer
+		 * Add CSS in footer for styles handled by the theme customizer
 		 * If the Customizer is active pull in the raw css. Otherwise pull in the prepared theme_mods if they exist
 		 *
 		 * @since  1.0.0
 		 * @return void
 		 */
 		public function add_inline_css() {
+			wp_enqueue_style( 'nandotess-resume-customizer', get_stylesheet_uri() );
 			$styles = get_theme_mod( 'nr_styles' );
 			
 			if ( is_customize_preview() || ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) || false === $styles ) {
-				wp_add_inline_style( 'nandotess-resume-style', $this->get_css() );
+				wp_add_inline_style( 'nandotess-resume-customizer', $this->get_css() );
 			} else {
-				wp_add_inline_style( 'nandotess-resume-style', $styles );
+				wp_add_inline_style( 'nandotess-resume-customizer', $styles );
 			}
 		}
 		

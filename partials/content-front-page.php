@@ -13,8 +13,7 @@
 		/**
 		 * Functions hooked in to nr_homepage add_action
 		 *
-		 * @hooked nr_homepage_content - 10
-		 * @hooked nr_homepage_widgets - 20
+		 * @hooked nr_homepage_section_about - 10
 		 */
 		do_action( 'nr_homepage' );
 	?>

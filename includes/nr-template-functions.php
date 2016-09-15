@@ -108,14 +108,14 @@ if ( ! function_exists( 'nr_header_nav_main' ) ) {
 	}
 }
 
-if ( ! function_exists( 'nr_homepage_content' ) ) {
+if ( ! function_exists( 'nr_homepage_section_about' ) ) {
 	/**
-	 * Homepage content
+	 * Homepage section about
 	 *
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function nr_homepage_content() {
+	function nr_homepage_section_about() {
 		?>
 		<section id="about" class="section about">
 			<div class="container">
@@ -146,26 +146,6 @@ if ( ! function_exists( 'nr_homepage_content' ) ) {
 				</div>
 			</div>
 		</section>
-		<?php
-	}
-}
-
-if ( ! function_exists( 'nr_homepage_widgets' ) ) {
-	/**
-	 * Homepage widgets sidebar
-	 *
-	 * @since  1.0.0
-	 * @return void
-	 */
-	function nr_homepage_widgets() {
-		?>
-		<div class="homepage-sidebar">
-			<?php
-				if ( is_active_sidebar( 'homepage-sidebar' ) ) {
-					dynamic_sidebar( 'homepage-sidebar' );
-				}
-			?>
-		</div>
 		<?php
 	}
 }

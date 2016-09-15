@@ -25,11 +25,9 @@ add_action( 'nr_header',        'nr_header_nav_main',            20 );
 /**
  * Homepage
  *
- * @see  nr_homepage_content()
- * @see  nr_homepage_widgets()
+ * @see  nr_homepage_section_about()
  */
-add_action( 'nr_homepage', 'nr_homepage_content', 10 );
-add_action( 'nr_homepage', 'nr_homepage_widgets', 20 );
+add_action( 'nr_homepage', 'nr_homepage_section_about', 10 );
 
 /**
  * Footer
