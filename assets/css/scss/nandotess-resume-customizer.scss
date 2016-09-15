@@ -68,6 +68,10 @@ body {
 			background-color: $section_about_background_color;
 		}
 
+		.thumbnail {
+			border-color: $section_about_background_color;
+		}
+
 		.section-title {
 			color: $section_about_text_color;
 		}

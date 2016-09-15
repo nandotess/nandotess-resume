@@ -14,8 +14,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Theme version
  */
-$theme                    = wp_get_theme( 'nandotess-resume' );
-$nandotess_resume_version = $theme['Version'];
+$theme         = wp_get_theme( 'nandotess-resume' );
+$theme_version = $theme['Version'];
 
 /**
  * Content width
@@ -28,13 +28,10 @@ if ( ! isset( $content_width ) ) {
  * Where Dreams Come True
  */
 $nandotess_resume = (object) array(
-	'version' => $nandotess_resume_version,
-	/**
-	 * Initialize all the things.
-	 */
-	'main'       => require 'includes/class-nandotess-resume.php',
-	'customizer' => require 'includes/customizer/class-nandotess-resume-customizer.php',
+	'version'    => $theme_version,
+	'main'       => require 'includes/class-nr.php',
+	'customizer' => require 'includes/customizer/class-nr-customizer.php',
 );
 
-require 'includes/nandotess-resume-template-hooks.php';
-require 'includes/nandotess-resume-template-functions.php';
+require 'includes/nr-template-hooks.php';
+require 'includes/nr-template-functions.php';

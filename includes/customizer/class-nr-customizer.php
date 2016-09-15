@@ -48,12 +48,12 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 		 * @return void
 		 */
 		public function add_inline_css() {
-			$nandotess_resume_styles = get_theme_mod( 'nandotess_resume_styles' );
+			$styles = get_theme_mod( 'nr_styles' );
 			
-			if ( is_customize_preview() || ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) || false === $nandotess_resume_styles ) {
+			if ( is_customize_preview() || ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) || false === $styles ) {
 				wp_add_inline_style( 'nandotess-resume-style', $this->get_css() );
 			} else {
-				wp_add_inline_style( 'nandotess-resume-style', $nandotess_resume_styles );
+				wp_add_inline_style( 'nandotess-resume-style', $styles );
 			}
 		}
 		
@@ -88,7 +88,7 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 			/**
 			 * Background
 			 */
-			$wp_customize->add_section( 'nandotess_resume_background' , array(
+			$wp_customize->add_section( 'nr_background' , array(
 				'title'      			=> __( 'Background', 'nandotess-resume' ),
 				'priority'   			=> 25,
 			) );
@@ -96,142 +96,142 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 			/**
 			 * Background: Background Color
 			 */
-			$wp_customize->add_setting( 'nandotess_resume_background_color', array(
+			$wp_customize->add_setting( 'nr_background_color', array(
 				'default'           	=> '#e3e3e3',
 				'sanitize_callback' 	=> 'sanitize_hex_color',
 			) );
 
-			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nandotess_resume_background_color', array(
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nr_background_color', array(
 				'label'	   				=> __( 'Background color', 'nandotess-resume' ),
-				'section'  				=> 'nandotess_resume_background',
-				'settings' 				=> 'nandotess_resume_background_color',
+				'section'  				=> 'nr_background',
+				'settings' 				=> 'nr_background_color',
 				'priority' 				=> 1,
 			) ) );
 
 			/**
-			 * Contact details
+			 * Contact Details
 			 */
-			$wp_customize->add_section( 'nandotess_resume_contact_details' , array(
+			$wp_customize->add_section( 'nr_contact_details' , array(
 				'title'      			=> __( 'Contact Details', 'nandotess-resume' ),
 				'priority'   			=> 26,
 			) );
 
 			/**
-			 * Contact details: Background Color
+			 * Contact Details: Background Color
 			 */
-			$wp_customize->add_setting( 'nandotess_resume_contact_details_background_color', array(
+			$wp_customize->add_setting( 'nr_contact_details_background_color', array(
 				'default'           	=> '#1e88e5',
 				'sanitize_callback' 	=> 'sanitize_hex_color',
 			) );
 
-			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nandotess_resume_contact_details_background_color', array(
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nr_contact_details_background_color', array(
 				'label'	   				=> __( 'Background color', 'nandotess-resume' ),
-				'section'  				=> 'nandotess_resume_contact_details',
-				'settings' 				=> 'nandotess_resume_contact_details_background_color',
+				'section'  				=> 'nr_contact_details',
+				'settings' 				=> 'nr_contact_details_background_color',
 				'priority' 				=> 1,
 			) ) );
 
 			/**
-			 * Contact details: Text Color
+			 * Contact Details: Text Color
 			 */
-			$wp_customize->add_setting( 'nandotess_resume_contact_details_text_color', array(
+			$wp_customize->add_setting( 'nr_contact_details_text_color', array(
 				'default'           	=> '#000000',
 				'sanitize_callback' 	=> 'sanitize_hex_color',
 			) );
 
-			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nandotess_resume_contact_details_text_color', array(
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nr_contact_details_text_color', array(
 				'label'	   				=> __( 'Text color', 'nandotess-resume' ),
-				'section'  				=> 'nandotess_resume_contact_details',
-				'settings' 				=> 'nandotess_resume_contact_details_text_color',
+				'section'  				=> 'nr_contact_details',
+				'settings' 				=> 'nr_contact_details_text_color',
 				'priority' 				=> 2,
 			) ) );
 
 			/**
-			 * Contact details: Phone
+			 * Contact Details: Phone
 			 */
-			$wp_customize->add_setting( 'nandotess_resume_phone', array(
+			$wp_customize->add_setting( 'nr_phone', array(
 				'default'           	=> '+0000 0000 0000',
 				'transport'          	=> 'postMessage',
 			) );
 
-			$wp_customize->add_control( 'nandotess_resume_phone', array(
+			$wp_customize->add_control( 'nr_phone', array(
 				'label'	   				=> __( 'Phone', 'nandotess-resume' ),
-				'section'  				=> 'nandotess_resume_contact_details',
-				'settings' 				=> 'nandotess_resume_phone',
+				'section'  				=> 'nr_contact_details',
+				'settings' 				=> 'nr_phone',
 				'priority' 				=> 3,
 			) );
 
-			$wp_customize->selective_refresh->add_partial( 'nandotess_resume_phone', array(
+			$wp_customize->selective_refresh->add_partial( 'nr_phone', array(
 				'selector'              => '.navbar-contact-details .phone .text',
 				'render_callback'       => function() {
-					echo get_theme_mod( 'nandotess_resume_phone', '+0000 0000 0000' );
+					echo get_theme_mod( 'nr_phone', '+0000 0000 0000' );
 				},
 			) );
 
 			/**
-			 * Contact details: Mail
+			 * Contact Details: Mail
 			 */
-			$wp_customize->add_setting( 'nandotess_resume_mail', array(
+			$wp_customize->add_setting( 'nr_mail', array(
 				'default'           	=> 'mail@mail.com',
 				'transport'          	=> 'postMessage',
 			) );
 
-			$wp_customize->add_control( 'nandotess_resume_mail', array(
+			$wp_customize->add_control( 'nr_mail', array(
 				'label'	   				=> __( 'Mail', 'nandotess-resume' ),
-				'section'  				=> 'nandotess_resume_contact_details',
-				'settings' 				=> 'nandotess_resume_mail',
+				'section'  				=> 'nr_contact_details',
+				'settings' 				=> 'nr_mail',
 				'priority' 				=> 4,
 			) );
 
-			$wp_customize->selective_refresh->add_partial( 'nandotess_resume_mail', array(
+			$wp_customize->selective_refresh->add_partial( 'nr_mail', array(
 				'selector'              => '.navbar-contact-details .mail .text',
 				'render_callback'       => function() {
-					echo get_theme_mod( 'nandotess_resume_mail', 'mail@mail.com' );
+					echo get_theme_mod( 'nr_mail', 'mail@mail.com' );
 				},
 			) );
 
 			/**
-			 * Main menu
+			 * Main Menu
 			 */
-			$wp_customize->add_section( 'nandotess_resume_main_menu' , array(
+			$wp_customize->add_section( 'nr_main_menu' , array(
 				'title'      			=> __( 'Main Menu', 'nandotess-resume' ),
 				'priority'   			=> 27,
 			) );
 
 			/**
-			 * Main menu: Background Color
+			 * Main Menu: Background Color
 			 */
-			$wp_customize->add_setting( 'nandotess_resume_main_menu_background_color', array(
+			$wp_customize->add_setting( 'nr_main_menu_background_color', array(
 				'default'           	=> '#2196f3',
 				'sanitize_callback' 	=> 'sanitize_hex_color',
 			) );
 
-			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nandotess_resume_main_menu_background_color', array(
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nr_main_menu_background_color', array(
 				'label'	   				=> __( 'Background color', 'nandotess-resume' ),
-				'section'  				=> 'nandotess_resume_main_menu',
-				'settings' 				=> 'nandotess_resume_main_menu_background_color',
+				'section'  				=> 'nr_main_menu',
+				'settings' 				=> 'nr_main_menu_background_color',
 				'priority' 				=> 1,
 			) ) );
 
 			/**
-			 * Main menu: Text Color
+			 * Main Menu: Text Color
 			 */
-			$wp_customize->add_setting( 'nandotess_resume_main_menu_text_color', array(
+			$wp_customize->add_setting( 'nr_main_menu_text_color', array(
 				'default'           	=> '#ffffff',
 				'sanitize_callback' 	=> 'sanitize_hex_color',
 			) );
 
-			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nandotess_resume_main_menu_text_color', array(
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nr_main_menu_text_color', array(
 				'label'	   				=> __( 'Text color', 'nandotess-resume' ),
-				'section'  				=> 'nandotess_resume_main_menu',
-				'settings' 				=> 'nandotess_resume_main_menu_text_color',
+				'section'  				=> 'nr_main_menu',
+				'settings' 				=> 'nr_main_menu_text_color',
 				'priority' 				=> 2,
 			) ) );
 
 			/**
 			 * Section About
 			 */
-			$wp_customize->add_section( 'nandotess_resume_section_about' , array(
+			$wp_customize->add_section( 'nr_section_about' , array(
 				'title'      			=> __( 'Section About', 'nandotess-resume' ),
 				'priority'   			=> 28,
 			) );
@@ -239,83 +239,83 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 			/**
 			 * Section About: Background Color
 			 */
-			$wp_customize->add_setting( 'nandotess_resume_section_about_background_color', array(
+			$wp_customize->add_setting( 'nr_section_about_background_color', array(
 				'default'           	=> '#ffffff',
 				'sanitize_callback' 	=> 'sanitize_hex_color',
 			) );
 
-			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nandotess_resume_section_about_background_color', array(
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nr_section_about_background_color', array(
 				'label'	   				=> __( 'Background color', 'nandotess-resume' ),
-				'section'  				=> 'nandotess_resume_section_about',
-				'settings' 				=> 'nandotess_resume_section_about_background_color',
+				'section'  				=> 'nr_section_about',
+				'settings' 				=> 'nr_section_about_background_color',
 				'priority' 				=> 1,
 			) ) );
 
 			/**
 			 * Section About: Text Color
 			 */
-			$wp_customize->add_setting( 'nandotess_resume_section_about_text_color', array(
+			$wp_customize->add_setting( 'nr_section_about_text_color', array(
 				'default'           	=> '#646464',
 				'sanitize_callback' 	=> 'sanitize_hex_color',
 			) );
 
-			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nandotess_resume_section_about_text_color', array(
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nr_section_about_text_color', array(
 				'label'	   				=> __( 'Text color', 'nandotess-resume' ),
-				'section'  				=> 'nandotess_resume_section_about',
-				'settings' 				=> 'nandotess_resume_section_about_text_color',
+				'section'  				=> 'nr_section_about',
+				'settings' 				=> 'nr_section_about_text_color',
 				'priority' 				=> 2,
 			) ) );
 
 			/**
 			 * Section About: Link Color
 			 */
-			$wp_customize->add_setting( 'nandotess_resume_section_about_link_color', array(
+			$wp_customize->add_setting( 'nr_section_about_link_color', array(
 				'default'           	=> '#2196f3',
 				'sanitize_callback' 	=> 'sanitize_hex_color',
 			) );
 
-			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nandotess_resume_section_about_link_color', array(
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nr_section_about_link_color', array(
 				'label'	   				=> __( 'Link color', 'nandotess-resume' ),
-				'section'  				=> 'nandotess_resume_section_about',
-				'settings' 				=> 'nandotess_resume_section_about_link_color',
+				'section'  				=> 'nr_section_about',
+				'settings' 				=> 'nr_section_about_link_color',
 				'priority' 				=> 3,
 			) ) );
 
 			/**
-			 * Social menu
+			 * Social Menu
 			 */
-			$wp_customize->add_section( 'nandotess_resume_social_men' , array(
+			$wp_customize->add_section( 'nr_social_men' , array(
 				'title'      			=> __( 'Social Menu', 'nandotess-resume' ),
 				'priority'   			=> 29,
 			) );
 
 			/**
-			 * Social menu: Background Color
+			 * Social Menu: Background Color
 			 */
-			$wp_customize->add_setting( 'nandotess_resume_social_menu_background_color', array(
+			$wp_customize->add_setting( 'nr_social_menu_background_color', array(
 				'default'           	=> '#ffffff',
 				'sanitize_callback' 	=> 'sanitize_hex_color',
 			) );
 
-			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nandotess_resume_social_menu_background_color', array(
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nr_social_menu_background_color', array(
 				'label'	   				=> __( 'Background color', 'nandotess-resume' ),
-				'section'  				=> 'nandotess_resume_social_men',
-				'settings' 				=> 'nandotess_resume_social_menu_background_color',
+				'section'  				=> 'nr_social_men',
+				'settings' 				=> 'nr_social_menu_background_color',
 				'priority' 				=> 1,
 			) ) );
 
 			/**
-			 * Social menu: Link Color
+			 * Social Menu: Link Color
 			 */
-			$wp_customize->add_setting( 'nandotess_resume_social_menu_link_color', array(
+			$wp_customize->add_setting( 'nr_social_menu_link_color', array(
 				'default'           	=> '#2196f3',
 				'sanitize_callback' 	=> 'sanitize_hex_color',
 			) );
 
-			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nandotess_resume_social_menu_link_color', array(
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nr_social_menu_link_color', array(
 				'label'	   				=> __( 'Link color', 'nandotess-resume' ),
-				'section'  				=> 'nandotess_resume_social_men',
-				'settings' 				=> 'nandotess_resume_social_menu_link_color',
+				'section'  				=> 'nr_social_men',
+				'settings' 				=> 'nr_social_menu_link_color',
 				'priority' 				=> 2,
 			) ) );
 		}
@@ -327,7 +327,7 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 		 * @return void
 		 */
 		public function set_theme_mod_style() {
-			set_theme_mod( 'nandotess_resume_styles', $this->get_css() );
+			set_theme_mod( 'nr_styles', $this->get_css() );
 		}
 		
 		/**
@@ -337,20 +337,20 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 		 * @return array $theme_mods theme mods
 		 */
 		public function get_theme_mods() {
-			return apply_filters( 'nandotess_resume_sass_variables', array(
+			return apply_filters( 'nr_sass_variables', array(
 				'screen-sm-min'                    => '768px',
 				'screen-md-min'                    => '992px',
 				'screen-lg-min'                    => '1200px',
-				'background_color'                 => get_theme_mod( 'nandotess_resume_background_color' ),
-				'contact_details_background_color' => get_theme_mod( 'nandotess_resume_contact_details_background_color' ),
-				'contact_details_text_color'       => get_theme_mod( 'nandotess_resume_contact_details_text_color' ),
-				'main_menu_background_color'       => get_theme_mod( 'nandotess_resume_main_menu_background_color' ),
-				'main_menu_text_color'             => get_theme_mod( 'nandotess_resume_main_menu_text_color' ),
-				'section_about_background_color'   => get_theme_mod( 'nandotess_resume_section_about_background_color' ),
-				'section_about_text_color'         => get_theme_mod( 'nandotess_resume_section_about_text_color' ),
-				'section_about_link_color'         => get_theme_mod( 'nandotess_resume_section_about_link_color' ),
-				'social_menu_background_color'     => get_theme_mod( 'nandotess_resume_social_menu_background_color' ),
-				'social_menu_link_color'           => get_theme_mod( 'nandotess_resume_social_menu_link_color' ),
+				'background_color'                 => get_theme_mod( 'nr_background_color', '#e3e3e3' ),
+				'contact_details_background_color' => get_theme_mod( 'nr_contact_details_background_color', '#1e88e5' ),
+				'contact_details_text_color'       => get_theme_mod( 'nr_contact_details_text_color', '#000000' ),
+				'main_menu_background_color'       => get_theme_mod( 'nr_main_menu_background_color', '#2196f3' ),
+				'main_menu_text_color'             => get_theme_mod( 'nr_main_menu_text_color', '#ffffff' ),
+				'section_about_background_color'   => get_theme_mod( 'nr_section_about_background_color', '#ffffff' ),
+				'section_about_text_color'         => get_theme_mod( 'nr_section_about_text_color', '#646464' ),
+				'section_about_link_color'         => get_theme_mod( 'nr_section_about_link_color', '#2196f3' ),
+				'social_menu_background_color'     => get_theme_mod( 'nr_social_menu_background_color', '#ffffff' ),
+				'social_menu_link_color'           => get_theme_mod( 'nr_social_menu_link_color', '#2196f3' ),
 			) );
 		}
 
@@ -375,7 +375,7 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 				}
 
 				if ( $wp_filesystem ) {
-					$scss = apply_filters( 'nandotess_resume_sass_content', $wp_filesystem->get_contents( $scss_file ) );
+					$scss = apply_filters( 'nr_sass_content', $wp_filesystem->get_contents( $scss_file ) );
 					$scssphp_file = get_template_directory() .'/vendor/leafo/scssphp/scss.inc.php';
 
 					if ( ! empty( $scss ) && file_exists( $scssphp_file ) ) {
@@ -389,7 +389,7 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 							$css = $compiler->compile( $scss );
 						} catch ( Exception $e ) {
 							$error = $e->getMessage();
-							return "/* {$error} */";
+							return "/*\n\n\$error:\n\n{$error}\n\n\$theme_mods:\n\n". var_export( $theme_mods, TRUE ) ."\n\n\$scss:\n\n{$scss} */";
 						}
 					}
 				}

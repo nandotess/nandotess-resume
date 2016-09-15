@@ -1,5 +1,5 @@
 @import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700";
-body { background-color: white; font-family: 'Roboto', sans-serif; position: relative; }
+body { background-color: #e3e3e3; font-family: 'Roboto', sans-serif; position: relative; }
 
 a:hover, a:active, a:focus { text-decoration: none; }
 
@@ -57,7 +57,7 @@ body.navbar-main-affixed .site-content { padding-top: 54px; }
 .site-footer .col-md-12 { background-color: white; padding: 30px 20px; text-align: center; }
 @media (min-width: 768px) { .site-footer .col-md-12 { padding: 40px; } }
 .site-footer .navbar-nav { display: inline-block; float: none; }
-.site-footer .navbar-nav li { display: inline-block; margin-right: 10px; }
+.site-footer .navbar-nav li { display: inline-block; margin-right: 20px; }
 .site-footer .navbar-nav li:last-child { margin-right: 0; }
 .site-footer .navbar-nav li a { color: #2196f3; height: 40px; opacity: 0.85; overflow: hidden; padding: 0; width: 40px; -webkit-transition: opacity 300ms ease-in-out; -moz-transition: opacity 300ms ease-in-out; -ms-transition: opacity 300ms ease-in-out; -o-transition: opacity 300ms ease-in-out; transition: opacity 300ms ease-in-out; }
 .site-footer .navbar-nav li a:hover, .site-footer .navbar-nav li a:active, .site-footer .navbar-nav li a:focus { background-color: transparent; opacity: 1; }
@@ -76,7 +76,7 @@ body.navbar-main-affixed .site-content { padding-top: 54px; }
 .section.about .col-md-12 { background-color: white; padding: 30px 20px; text-align: center; }
 @media (min-width: 768px) { .section.about .col-md-12 { padding: 40px; } }
 @media (min-width: 992px) { .section.about .col-md-12 { padding: 80px 40px; } }
-.section.about .thumbnail { margin: -100px auto 0 auto; width: 150px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; }
+.section.about .thumbnail { border: 1px solid white; margin: -100px auto 0 auto; width: 150px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; }
 @media (min-width: 768px) { .section.about .thumbnail { margin-top: -110px; } }
 @media (min-width: 992px) { .section.about .thumbnail { margin-top: -150px; } }
 .section.about .thumbnail img { -webkit-border-radius: 50%; -moz-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; }

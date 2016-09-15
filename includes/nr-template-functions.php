@@ -11,30 +11,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! function_exists( 'nandotess_resume_header_skip_links' ) ) {
+if ( ! function_exists( 'nr_header_skip_links' ) ) {
 	/**
 	 * Skip links
 	 *
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function nandotess_resume_header_skip_links() {
+	function nr_header_skip_links() {
 		?>
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'nandotess-resume' ); ?></a>
 		<?php
 	}
 }
 
-if ( ! function_exists( 'nandotess_resume_header_nav_contact_details' ) ) {
+if ( ! function_exists( 'nr_header_nav_contact_details' ) ) {
 	/**
 	 * Contact details menu
 	 *
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function nandotess_resume_header_nav_contact_details( $device ) {
-		$mail          = get_theme_mod( 'nandotess_resume_mail', 'mail@mail.com' );
-		$phone         = get_theme_mod( 'nandotess_resume_phone', '+0000 0000 0000' );
+	function nr_header_nav_contact_details( $device ) {
+		$mail          = get_theme_mod( 'nr_mail', 'mail@mail.com' );
+		$phone         = get_theme_mod( 'nr_phone', '+0000 0000 0000' );
 		$phone_numbers = preg_replace( '/\D/', '', $phone );
 
 		if ( $mail || $phone_numbers || is_customize_preview() ) :
@@ -71,14 +71,14 @@ if ( ! function_exists( 'nandotess_resume_header_nav_contact_details' ) ) {
 	}
 }
 
-if ( ! function_exists( 'nandotess_resume_header_nav_main' ) ) {
+if ( ! function_exists( 'nr_header_nav_main' ) ) {
 	/**
 	 * Main menu
 	 *
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function nandotess_resume_header_nav_main() {
+	function nr_header_nav_main() {
 		?>
 		<nav class="navbar navbar-main">
 			<div class="container-fluid">
@@ -90,7 +90,7 @@ if ( ! function_exists( 'nandotess_resume_header_nav_main' ) ) {
 						<span class="icon-bar"></span>
 					</button>
 
-					<?php nandotess_resume_header_nav_contact_details( 'mobile' ); ?>
+					<?php nr_header_nav_contact_details( 'mobile' ); ?>
 				</div>
 
 				<div class="collapse navbar-collapse" id="navbar-main">
@@ -108,14 +108,14 @@ if ( ! function_exists( 'nandotess_resume_header_nav_main' ) ) {
 	}
 }
 
-if ( ! function_exists( 'nandotess_resume_homepage_content' ) ) {
+if ( ! function_exists( 'nr_homepage_content' ) ) {
 	/**
 	 * Homepage content
 	 *
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function nandotess_resume_homepage_content() {
+	function nr_homepage_content() {
 		?>
 		<section id="about" class="section about">
 			<div class="container">
@@ -141,7 +141,7 @@ if ( ! function_exists( 'nandotess_resume_homepage_content' ) ) {
 							<?php the_content(); ?>
 						</div>
 
-						<?php do_action( 'nandotess_resume_section_about_bottom' ); ?>
+						<?php do_action( 'nr_section_about_bottom' ); ?>
 					</div>
 				</div>
 			</div>
@@ -150,14 +150,14 @@ if ( ! function_exists( 'nandotess_resume_homepage_content' ) ) {
 	}
 }
 
-if ( ! function_exists( 'nandotess_resume_homepage_widgets' ) ) {
+if ( ! function_exists( 'nr_homepage_widgets' ) ) {
 	/**
 	 * Homepage widgets sidebar
 	 *
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function nandotess_resume_homepage_widgets() {
+	function nr_homepage_widgets() {
 		?>
 		<div class="homepage-sidebar">
 			<?php
@@ -170,14 +170,14 @@ if ( ! function_exists( 'nandotess_resume_homepage_widgets' ) ) {
 	}
 }
 
-if ( ! function_exists( 'nandotess_resume_footer_nav_social' ) ) {
+if ( ! function_exists( 'nr_footer_nav_social' ) ) {
 	/**
 	 * Social menu
 	 *
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function nandotess_resume_footer_nav_social() {
+	function nr_footer_nav_social() {
 		wp_nav_menu( array(
 			'theme_location' => 'social',
 			'menu_class' => 'nav navbar-nav',

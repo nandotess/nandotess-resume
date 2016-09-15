@@ -15,11 +15,11 @@
 						<div class="col-md-12">
 							<?php
 								/**
-								 * Functions hooked into nandotess_resume_footer action
+								 * Functions hooked into nr_footer action
 								 *
-								 * @hooked nandotess_resume_footer_nav_social - 10
+								 * @hooked nr_footer_nav_social - 10
 								 */
-								do_action( 'nandotess_resume_footer' );
+								do_action( 'nr_footer' );
 							?>
 						</div>
 					</div>

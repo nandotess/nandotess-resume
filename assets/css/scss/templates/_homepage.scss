@@ -23,6 +23,7 @@
 		}
 
 		.thumbnail {
+			border: 1px solid $section_about_background_color;
 			margin: -100px auto 0 auto;
 			width: 150px;
 			@include border-radius(50%);
