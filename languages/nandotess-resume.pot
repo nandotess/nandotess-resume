@@ -35,7 +35,7 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:106, includes/customizer/class-nr-customizer.php:129, includes/customizer/class-nr-customizer.php:211, includes/customizer/class-nr-customizer.php:249, includes/customizer/class-nr-customizer.php:302
+#: includes/customizer/class-nr-customizer.php:106, includes/customizer/class-nr-customizer.php:129, includes/customizer/class-nr-customizer.php:211, includes/customizer/class-nr-customizer.php:249, includes/customizer/class-nr-customizer.php:317
 msgid "Background color"
 msgstr ""
 
@@ -43,7 +43,7 @@ msgstr ""
 msgid "Contact Details"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:144, includes/customizer/class-nr-customizer.php:226, includes/customizer/class-nr-customizer.php:264
+#: includes/customizer/class-nr-customizer.php:144, includes/customizer/class-nr-customizer.php:226, includes/customizer/class-nr-customizer.php:279
 msgid "Text color"
 msgstr ""
 
@@ -63,11 +63,15 @@ msgstr ""
 msgid "Section About"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:279, includes/customizer/class-nr-customizer.php:317
+#: includes/customizer/class-nr-customizer.php:264
+msgid "Title color"
+msgstr ""
+
+#: includes/customizer/class-nr-customizer.php:294, includes/customizer/class-nr-customizer.php:332
 msgid "Link color"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:289
+#: includes/customizer/class-nr-customizer.php:304
 msgid "Social Menu"
 msgstr ""
 

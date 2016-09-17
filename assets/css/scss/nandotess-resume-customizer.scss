@@ -8,22 +8,12 @@ body {
 
 		.navbar-nav {
 			li {
-				a {
-					color: $contact_details_text_color;
-
-					&:hover,
-					&:active,
-					&:focus {
-						@media (min-width: $screen-sm-min) {
-							border-bottom-color: $contact_details_text_color;
-						}
-					}
-				}
-
-				&.active {
+				@media (min-width: $screen_sm_min) {
 					a {
-						@media (min-width: $screen-sm-min) {
-							border-bottom-color: $contact_details_text_color;
+						color: $contact_details_text_color;
+
+						&:before {
+							background: $contact_details_text_color;
 						}
 					}
 				}
@@ -34,25 +24,26 @@ body {
 	.navbar-main {
 		background-color: $main_menu_background_color;
 
+		.navbar-header {
+			.navbar-toggle {
+				border-color: $main_menu_text_color;
+
+				.icon-bar {
+					background-color: $main_menu_text_color;
+				}
+			}
+		}
+
+		.navbar-header,
 		.navbar-collapse {
 			.navbar-nav {
 				li {
-					a {
-						color: $main_menu_text_color;
-
-						&:hover,
-						&:active,
-						&:focus {
-							@media (min-width: $screen-sm-min) {
-								border-bottom-color: $main_menu_text_color;
-							}
-						}
-					}
-
-					&.active {
+					@media (min-width: $screen_sm_min) {
 						a {
-							@media (min-width: $screen-sm-min) {
-								border-bottom-color: $main_menu_text_color;
+							color: $main_menu_text_color;
+							
+							&:before {
+								background: $main_menu_text_color;
 							}
 						}
 					}
@@ -72,25 +63,19 @@ body {
 			border-color: $section_about_background_color;
 		}
 
-		.section-title {
+		.title {
+			color: $section_about_title_color;
+		}
+
+		.description {
+			color: l$section_about_text_color;
+		}
+
+		.full-description {
 			color: $section_about_text_color;
-		}
-
-		.section-description {
-			color: lighten($section_about_text_color, 10%);
-		}
-
-		.section-full-description {
-			color: lighten($section_about_text_color, 10%);
 
 			a {
 				color: $section_about_link_color;
-
-				&:hover,
-				&:active,
-				&:focus {
-					color: lighten($section_about_link_color, 10%);
-				}
 			}
 		}
 	}
@@ -105,14 +90,6 @@ body {
 		li {
 			a {
 				color: $social_menu_link_color;
-
-				&:hover,
-				&:active,
-				&:focus {
-					@media (min-width: $screen-sm-min) {
-						border-bottom-color: $social_menu_link_color;
-					}
-				}
 			}
 		}
 	}

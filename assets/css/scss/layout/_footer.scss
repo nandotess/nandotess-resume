@@ -3,11 +3,11 @@
 		
 	.col-md-12 {
 		background-color: $social_menu_background_color;
-		padding: 30px 20px;
+		padding: 20px;
 		text-align: center;
 
-		@media (min-width: $screen-sm-min) {
-			padding: 40px;
+		@media (min-width: $screen_sm_min) {
+			padding: 30px;
 		}
 	}
 
@@ -17,7 +17,7 @@
 
 		li {
 			display: inline-block;
-			margin-right: 20px;
+			margin-right: 10px;
 
 			&:last-child {
 				margin-right: 0;
@@ -25,33 +25,30 @@
 
 			a {
 				color: $social_menu_link_color;
-				height: 40px;
-				opacity: 0.85;
 				overflow: hidden;
-				padding: 0;
-				width: 40px;
-				@include transition(opacity 300ms ease-in-out);
-
-				&:hover,
-				&:active,
-				&:focus {
-					background-color: transparent;
-					opacity: 1;
-
-					@media (min-width: $screen-sm-min) {
-						border-bottom-color: $social_menu_link_color;
-					}
-				}
+				padding: 10px;
 
 				&:before {
 					display: block;
 					font: {
 						family: 'FontAwesome';
 						size: 40px;
-						weight: normal;
 						variant: normal;
+						weight: normal;
 					}
 					line-height: 1;
+					@include transition(transform 300ms ease-in-out);
+				}
+
+				&:hover,
+				&:active,
+				&:focus {
+					background-color: transparent;
+
+					&:before {
+						@include transform(scale(1.3));
+						@include transition_timing_function(cubic-bezier(0.47, 2.02, 0.31, -0.36));
+					}
 				}
 
 				&[href*="facebook.com"]:before {
@@ -76,6 +73,10 @@
 
 				&[href*="github.com"]:before {
 					content: "\f09b";
+				}
+
+				span {
+					display: none;
 				}
 			}
 		}

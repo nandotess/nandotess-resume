@@ -22,11 +22,11 @@ a {
 	max-width: 1280px;
 	width: 90%;
 
-	@media (min-width: $screen-sm-min) {
+	@media (min-width: $screen_sm_min) {
 		width: 85%;
 	}
 
-	@media (min-width: $screen-md-min) {
+	@media (min-width: $screen_md_min) {
 		width: 70%;
 	}
 }

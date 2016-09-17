@@ -42,11 +42,11 @@ if ( ! function_exists( 'nr_header_nav_contact_details' ) ) {
 				?>
 				<ul class="nav navbar-nav hidden visible-xs">
 					<?php if ( $phone_numbers || is_customize_preview() ) : ?>
-						<li><a class="phone" href="tel:<?php echo esc_html( $phone_numbers ); ?>"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></a></li>
+						<li><a class="phone" href="tel:<?php echo esc_html( $phone_numbers ); ?>"><span class="fa fa-phone" aria-hidden="true"></span></a></li>
 					<?php endif; ?>
 
 					<?php if ( $mail || is_customize_preview() ) : ?>
-						<li><a class="mail" href="mailto:<?php echo esc_html( $mail ); ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
+						<li><a class="mail" href="mailto:<?php echo esc_html( $mail ); ?>"><span class="fa fa-envelope" aria-hidden="true"></span></a></li>
 					<?php endif; ?>
 				</ul>
 				<?php
@@ -56,11 +56,11 @@ if ( ! function_exists( 'nr_header_nav_contact_details' ) ) {
 					<div class="container-fluid">
 						<ul class="nav navbar-nav">
 							<?php if ( $phone_numbers || is_customize_preview() ) : ?>
-								<li><a class="phone" href="tel:<?php echo esc_html( $phone_numbers ); ?>"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> <span class="text"><?php echo esc_html( $phone ); ?></span></a></li>
+								<li><a class="phone" href="tel:<?php echo esc_html( $phone_numbers ); ?>"><span class="fa fa-phone" aria-hidden="true"></span> <span class="text"><?php echo esc_html( $phone ); ?></span></a></li>
 							<?php endif; ?>
 
 							<?php if ( $mail || is_customize_preview() ) : ?>
-								<li><a class="mail" href="mailto:<?php echo esc_html( $mail ); ?>"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <span class="text"><?php echo esc_html( $mail ); ?></span></a></li>
+								<li><a class="mail" href="mailto:<?php echo esc_html( $mail ); ?>"><span class="fa fa-envelope" aria-hidden="true"></span> <span class="text"><?php echo esc_html( $mail ); ?></span></a></li>
 							<?php endif; ?>
 						</ul>
 					</div>
@@ -97,8 +97,8 @@ if ( ! function_exists( 'nr_header_nav_main' ) ) {
 					<?php
 						wp_nav_menu( array(
 							'theme_location' => 'primary',
-							'menu_class' => 'nav navbar-nav',
-							'container' => false,
+							'menu_class'     => 'nav navbar-nav',
+							'container'      => false,
 						) );
 					?>
 				</div>
@@ -121,23 +121,25 @@ if ( ! function_exists( 'nr_homepage_section_about' ) ) {
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<?php if ( has_post_thumbnail() ) : ?>
-							<div class="thumbnail">
+						<div class="thumbnail">
+							<?php if ( has_post_thumbnail() ) : ?>
 								<?php the_post_thumbnail( 'medium', array( 'class' => 'img-responsive' ) ); ?>
-							</div>
-						<?php endif; ?>
+							<?php else: ?>
+								<img width="300" height="300" src="http://placehold.it/300x300" class="img-responsive wp-post-image" alt="placeholder">
+							<?php endif; ?>
+						</div>
 
-						<h1 class="section-title"><?php bloginfo( 'name' ); ?></h1>
+						<h1 class="title"><?php bloginfo( 'name' ); ?></h1>
 
 						<?php
 							$description = get_bloginfo( 'description', 'display' );
 
 							if ( $description || is_customize_preview() ) : ?>
-								<h2 class="section-description"><?php echo $description; /* WPCS: xss ok. */ ?></h2>
+								<h2 class="description"><?php echo $description; /* WPCS: xss ok. */ ?></h2>
 							<?php endif;
 						?>
 
-						<div class="section-full-description">
+						<div class="full-description">
 							<?php the_content(); ?>
 						</div>
 
@@ -160,8 +162,10 @@ if ( ! function_exists( 'nr_footer_nav_social' ) ) {
 	function nr_footer_nav_social() {
 		wp_nav_menu( array(
 			'theme_location' => 'social',
-			'menu_class' => 'nav navbar-nav',
-			'container' => false,
+			'menu_class'     => 'nav navbar-nav',
+			'container'      => false,
+			'link_before'    => '<span>',
+			'link_after'    => '</span>',
 		) );
 	}
 }

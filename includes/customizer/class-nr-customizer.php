@@ -22,9 +22,9 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 		 * Setup class
 		 */
 		public function __construct() {
-			add_action( 'after_setup_theme',    array( $this, 'remove_custom_background' ) );
-			add_action( 'wp_footer',            array( $this, 'add_inline_css' ) );
-			add_action( 'customize_register',   array( $this, 'customize_register' ) );
+			add_action( 'after_setup_theme',  array( $this, 'remove_custom_background' ) );
+			add_action( 'wp_footer',          array( $this, 'add_inline_css' ) );
+			add_action( 'customize_register', array( $this, 'customize_register' ) );
 			
 			add_action( 'after_switch_theme',   array( $this, 'set_theme_mod_style' ) );
 			add_action( 'customize_save_after', array( $this, 'set_theme_mod_style' ) );
@@ -73,14 +73,14 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 			$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
 			$wp_customize->selective_refresh->add_partial( 'blogname', array(
-				'selector'              => '.section.about .section-title',
+				'selector'              => '.section.about .title',
 				'render_callback'       => function() {
 					bloginfo( 'name' );
 				},
 			) );
 
 			$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
-				'selector'              => '.section.about .section-description',
+				'selector'              => '.section.about .description',
 				'render_callback'       => function() {
 					bloginfo( 'description' );
 				},
@@ -253,10 +253,25 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 			) ) );
 
 			/**
+			 * Section About: Title Color
+			 */
+			$wp_customize->add_setting( 'nr_section_about_title_color', array(
+				'default'           	=> '#5f5f5f',
+				'sanitize_callback' 	=> 'sanitize_hex_color',
+			) );
+
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nr_section_about_title_color', array(
+				'label'	   				=> __( 'Title color', 'nandotess-resume' ),
+				'section'  				=> 'nr_section_about',
+				'settings' 				=> 'nr_section_about_title_color',
+				'priority' 				=> 2,
+			) ) );
+
+			/**
 			 * Section About: Text Color
 			 */
 			$wp_customize->add_setting( 'nr_section_about_text_color', array(
-				'default'           	=> '#646464',
+				'default'           	=> '#727272',
 				'sanitize_callback' 	=> 'sanitize_hex_color',
 			) );
 
@@ -264,7 +279,7 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 				'label'	   				=> __( 'Text color', 'nandotess-resume' ),
 				'section'  				=> 'nr_section_about',
 				'settings' 				=> 'nr_section_about_text_color',
-				'priority' 				=> 2,
+				'priority' 				=> 3,
 			) ) );
 
 			/**
@@ -279,7 +294,7 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 				'label'	   				=> __( 'Link color', 'nandotess-resume' ),
 				'section'  				=> 'nr_section_about',
 				'settings' 				=> 'nr_section_about_link_color',
-				'priority' 				=> 3,
+				'priority' 				=> 4,
 			) ) );
 
 			/**
@@ -342,14 +357,20 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 				'screen-sm-min'                    => '768px',
 				'screen-md-min'                    => '992px',
 				'screen-lg-min'                    => '1200px',
+
 				'background_color'                 => get_theme_mod( 'nr_background_color', '#e3e3e3' ),
+				
 				'contact_details_background_color' => get_theme_mod( 'nr_contact_details_background_color', '#1e88e5' ),
 				'contact_details_text_color'       => get_theme_mod( 'nr_contact_details_text_color', '#000000' ),
+				
 				'main_menu_background_color'       => get_theme_mod( 'nr_main_menu_background_color', '#2196f3' ),
 				'main_menu_text_color'             => get_theme_mod( 'nr_main_menu_text_color', '#ffffff' ),
+				
 				'section_about_background_color'   => get_theme_mod( 'nr_section_about_background_color', '#ffffff' ),
-				'section_about_text_color'         => get_theme_mod( 'nr_section_about_text_color', '#646464' ),
+				'section_about_title_color'        => get_theme_mod( 'nr_section_about_title_color', '#5f5f5f' ),
+				'section_about_text_color'         => get_theme_mod( 'nr_section_about_text_color', '#727272' ),
 				'section_about_link_color'         => get_theme_mod( 'nr_section_about_link_color', '#2196f3' ),
+				
 				'social_menu_background_color'     => get_theme_mod( 'nr_social_menu_background_color', '#ffffff' ),
 				'social_menu_link_color'           => get_theme_mod( 'nr_social_menu_link_color', '#2196f3' ),
 			) );

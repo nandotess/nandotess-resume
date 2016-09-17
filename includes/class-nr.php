@@ -65,7 +65,7 @@ if ( ! class_exists( 'NandotessResume' ) ) :
 				$widget_tags = array(
 					'before_widget' => '<div class="widget %2$s">',
 					'after_widget'  => '</div>',
-					'before_title'  => '<h2 class="section-title">',
+					'before_title'  => '<h2 class="title">',
 					'after_title'   => '</h2>'
 				);
 

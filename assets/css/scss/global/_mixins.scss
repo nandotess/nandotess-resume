@@ -1,30 +1,58 @@
-@mixin box-sizing($box-sizing) {
-	-webkit-box-sizing: $box-sizing;
-	-moz-box-sizing: $box-sizing;
-	box-sizing: $box-sizing;
+// Multiple prefixes
+
+// Multiple prefixes: animation-...
+@mixin animation($sufix, $animation...) {
+	-webkit-animation-#{$sufix}: $animation;
+	animation-#{$sufix}: $animation;
 }
 
-@mixin box-shadow($box-shadow) {
-	-webkit-box-shadow: $box-shadow;
-	-moz-box-shadow: $box-shadow;
-	-o-box-shadow: $box-shadow;
-	box-shadow: $box-shadow;
+// Multiple prefixes: backface-visibility
+@mixin backface_visibility($backface_visibility) {
+	-webkit-backface-visibility: $backface_visibility;
+	backface-visibility: $backface_visibility;
 }
 
-@mixin text-shadow($text-shadow) {
-	-webkit-text-shadow: $text-shadow;
-	-moz-text-shadow: $text-shadow;
-	-o-text-shadow: $text-shadow;
-	text-shadow: $text-shadow;
+// Multiple prefixes: border-radius
+@mixin border-radius($border_radius) {
+	-webkit-border-radius: $border_radius;
+	-moz-border-radius: $border_radius;
+	-o-border-radius: $border_radius;
+	border-radius: $border_radius;
 }
 
-@mixin border-radius($border-radius) {
-	-webkit-border-radius: $border-radius;
-	-moz-border-radius: $border-radius;
-	-o-border-radius: $border-radius;
-	border-radius: $border-radius;
+// Multiple prefixes: box-sizing
+@mixin box-sizing($box_sizing) {
+	-webkit-box-sizing: $box_sizing;
+	-moz-box-sizing: $box_sizing;
+	box-sizing: $box_sizing;
 }
 
+// Multiple prefixes: box-shadow
+@mixin box-shadow($box_shadow) {
+	-webkit-box-shadow: $box_shadow;
+	-moz-box-shadow: $box_shadow;
+	-o-box-shadow: $box_shadow;
+	box-shadow: $box_shadow;
+}
+
+// Multiple prefixes: transform
+@mixin transform($transform) {
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-ms-transform: $transform;
+	-o-transform: $transform;
+	transform: $transform;
+}
+
+// Multiple prefixes: text-shadow
+@mixin text-shadow($text_shadow) {
+	-webkit-text-shadow: $text_shadow;
+	-moz-text-shadow: $text_shadow;
+	-o-text-shadow: $text_shadow;
+	text-shadow: $text_shadow;
+}
+
+// Multiple prefixes: transition
 @mixin transition($transition...) {
 	-webkit-transition: $transition;
 	-moz-transition: $transition;
@@ -33,51 +61,79 @@
 	transition: $transition;
 }
 
-@mixin transform($transform...) {
-	-webkit-transform: $transform;
-	-moz-transform: $transform;
-	-ms-transform: $transform;
-	-o-transform: $transform;
-	transform: $transform;
+// Multiple prefixes: transition-timing-function
+@mixin transition_timing_function($transition_timing_function) {
+	-webkit-transition-timing-function: $transition_timing_function;
+	-moz-transition-timing-function: $transition_timing_function;
+	-ms-transition-timing-function: $transition_timing_function;
+	-o-transition-timing-function: $transition_timing_function;
+	transition-timing-function: $transition_timing_function;
 }
 
-@mixin nav-link($color-text, $font-weight: normal, $text-transform: none) {
+// Complex functions
+
+// Nav link
+@mixin nav_link($color_text, $font_weight: normal, $text_transform: none) {
+	@include hover_border_bottom($color_text);
+
 	a {
-		color: $color-text;
+		color: $color_text;
 		font: {
 			size: 15px;
-			weight: $font-weight;
+			weight: $font_weight;
 		}
-		opacity: 0.85;
-		text-transform: $text-transform;
-		@include transition(opacity 300ms ease-in-out, border-bottom 300ms ease-in-out);
-
-		@media (min-width: $screen-sm-min) {
-			border: {
-				bottom: 2px solid transparent;
-				top: 2px solid transparent;
-			}
-		}
+		text-transform: $text_transform;
 
 		&:hover,
 		&:active,
 		&:focus {
 			background-color: transparent;
-			opacity: 1;
-
-			@media (min-width: $screen-sm-min) {
-				border-bottom-color: $color-text;
-			}
 		}
 	}
 
 	&.active {
 		a {
 			background-color: transparent;
-			opacity: 1;
+		}
+	}
+}
 
-			@media (min-width: $screen-sm-min) {
-				border-bottom-color: $color-text;
+// Hover effect: border bottom
+@mixin hover_border_bottom($color) {
+	@media (min-width: $screen_sm_min) {
+		a {
+			overflow: hidden;
+			position: relative;
+			@include transform(translateZ(0));
+			@include backface_visibility(hidden);
+
+			&:before {
+				background: $color;
+				bottom: 0;
+				content: "";
+				left: 0;
+				height: 3px;
+				position: absolute;
+				right: 0;
+				z-index: -1;
+				@include transform(translateY(3px));
+				@include transition(transform 300ms ease-in-out);
+			}
+
+			&:hover,
+			&:active,
+			&:focus {
+				&:before {
+					@include transform(translateY(0));
+				}
+			}
+		}
+
+		&.active {
+			a {
+				&:before {
+					@include transform(translateY(0));
+				}
 			}
 		}
 	}
