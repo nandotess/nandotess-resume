@@ -120,28 +120,30 @@ if ( ! function_exists( 'nr_homepage_section_about' ) ) {
 		<section id="about" class="section about">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12">
-						<?php if ( has_post_thumbnail() ) : ?>
-							<?php the_post_thumbnail( 'medium', array( 'class' => 'image img-responsive img-circle' ) ); ?>
-						<?php else: ?>
-							<img width="300" height="300" src="http://placehold.it/300x300" class="image img-responsive img-circle wp-post-image" alt="placeholder">
-						<?php endif; ?>
+					<div class="box">
+						<div class="col-md-12">
+							<?php if ( has_post_thumbnail() ) : ?>
+								<?php the_post_thumbnail( 'medium', array( 'class' => 'image img-responsive img-circle' ) ); ?>
+							<?php else: ?>
+								<img width="300" height="300" src="http://placehold.it/300x300" class="image img-responsive img-circle wp-post-image" alt="placeholder">
+							<?php endif; ?>
 
-						<h1 class="title"><?php bloginfo( 'name' ); ?></h1>
+							<h1 class="title"><?php bloginfo( 'name' ); ?></h1>
 
-						<?php
-							$description = get_bloginfo( 'description', 'display' );
+							<?php
+								$description = get_bloginfo( 'description', 'display' );
 
-							if ( $description || is_customize_preview() ) : ?>
-								<h2 class="description"><?php echo $description; /* WPCS: xss ok. */ ?></h2>
-							<?php endif;
-						?>
+								if ( $description || is_customize_preview() ) : ?>
+									<h2 class="description"><?php echo $description; /* WPCS: xss ok. */ ?></h2>
+								<?php endif;
+							?>
 
-						<div class="full-description">
-							<?php the_content(); ?>
+							<div class="full-description">
+								<?php the_content(); ?>
+							</div>
+
+							<?php do_action( 'nr_section_about_bottom' ); ?>
 						</div>
-
-						<?php do_action( 'nr_section_about_bottom' ); ?>
 					</div>
 				</div>
 			</div>

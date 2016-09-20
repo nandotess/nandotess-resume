@@ -55,7 +55,7 @@ body {
 
 .section {
 	&.about {
-		.col-md-12 {
+		.box {
 			background-color: $section_about_background_color;
 		}
 
@@ -82,7 +82,7 @@ body {
 }
 
 .site-footer {
-	.col-md-12 {
+	.row {
 		background-color: $social_menu_background_color;
 	}
 

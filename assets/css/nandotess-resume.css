@@ -1473,6 +1473,30 @@ tbody.collapse.in { display: table-row-group; }
 
 a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active { border-color: #337ab7; }
 
+@-webkit-keyframes progress-bar-stripes { from { background-position: 40px 0; }
+  to { background-position: 0 0; } }
+@keyframes progress-bar-stripes { from { background-position: 40px 0; }
+  to { background-position: 0 0; } }
+.progress { overflow: hidden; height: 20px; margin-bottom: 20px; background-color: #f5f5f5; border-radius: 4px; -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); }
+
+.progress-bar { float: left; width: 0%; height: 100%; font-size: 12px; line-height: 20px; color: #fff; text-align: center; background-color: #337ab7; -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15); box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15); -webkit-transition: width 0.6s ease; -o-transition: width 0.6s ease; transition: width 0.6s ease; }
+
+.progress-striped .progress-bar, .progress-bar-striped { background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-size: 40px 40px; }
+
+.progress.active .progress-bar, .progress-bar.active { -webkit-animation: progress-bar-stripes 2s linear infinite; -o-animation: progress-bar-stripes 2s linear infinite; animation: progress-bar-stripes 2s linear infinite; }
+
+.progress-bar-success { background-color: #5cb85c; }
+.progress-striped .progress-bar-success { background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); }
+
+.progress-bar-info { background-color: #5bc0de; }
+.progress-striped .progress-bar-info { background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); }
+
+.progress-bar-warning { background-color: #f0ad4e; }
+.progress-striped .progress-bar-warning { background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); }
+
+.progress-bar-danger { background-color: #d9534f; }
+.progress-striped .progress-bar-danger { background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); }
+
 .clearfix:before, .clearfix:after { content: " "; display: table; }
 .clearfix:after { clear: both; }
 
@@ -2909,17 +2933,20 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active { border-color: #337ab7
 .sr-only-focusable:active, .sr-only-focusable:focus { position: static; width: auto; height: auto; margin: 0; overflow: visible; clip: auto; }
 
 /** nandotess-resume.css  @author   Fernando Tessmann @since    1.0.0 @package  nandotess-resume */
+.section .box:before, .section .box:after { content: " "; display: table; }
+.section .box:after { clear: both; }
+
 body { background-color: #e3e3e3; position: relative; }
 
 a:hover, a:active, a:focus { text-decoration: none; }
 
 .site { padding-bottom: 30px; }
 
-.container { max-width: 1280px; width: 90%; }
+.container { max-width: 1280px; }
 @media (min-width: 768px) { .container { width: 85%; } }
 @media (min-width: 992px) { .container { width: 70%; } }
 
-.container-fluid { max-width: 1280px; width: 90%; }
+.container-fluid { max-width: 1280px; width: 85%; }
 
 .screen-reader-text { clip: rect(1px, 1px, 1px, 1px); height: 1px; overflow: hidden; position: absolute; width: 1px; }
 .screen-reader-text:focus { background-color: #f1f1f1; clip: auto; color: black; display: block; font-size: 14px; font-weight: bold; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); -o-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); }
@@ -2969,8 +2996,8 @@ body.admin-bar .site-header .navbar-main.affix { top: 32px; }
 body.navbar-main-affixed .site-content { padding-top: 54px; }
 
 .site-footer { padding-top: 30px; }
-.site-footer .col-md-12 { background-color: white; padding: 20px; text-align: center; }
-@media (min-width: 768px) { .site-footer .col-md-12 { padding: 30px; } }
+.site-footer .row { background-color: white; padding: 20px; text-align: center; }
+@media (min-width: 768px) { .site-footer .row { padding: 30px; } }
 .site-footer .navbar-nav { display: inline-block; float: none; }
 .site-footer .navbar-nav li { display: inline-block; margin-right: 10px; }
 .site-footer .navbar-nav li:last-child { margin-right: 0; }
@@ -2995,9 +3022,9 @@ body.navbar-main-affixed .site-content { padding-top: 54px; }
 .section .full-description a:hover, .section .full-description a:active, .section .full-description a:focus { text-decoration: underline; }
 .section.about { padding-top: 100px; }
 @media (min-width: 768px) { .section.about { padding-top: 110px; } }
-.section.about .col-md-12 { background-color: white; padding: 30px 20px; text-align: center; }
-@media (min-width: 768px) { .section.about .col-md-12 { padding: 40px; } }
-@media (min-width: 992px) { .section.about .col-md-12 { padding: 80px 40px; } }
+.section.about .box { background-color: white; padding: 30px 0; text-align: center; }
+@media (min-width: 768px) { .section.about .box { padding: 40px 25px; } }
+@media (min-width: 992px) { .section.about .box { padding: 80px 25px; } }
 .section.about .image { border: 4px solid white; margin: -100px auto 0 auto; width: 150px; }
 @media (min-width: 768px) { .section.about .image { margin-top: -110px; } }
 @media (min-width: 992px) { .section.about .image { margin-top: -150px; } }
