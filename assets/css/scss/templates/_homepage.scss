@@ -4,7 +4,7 @@
 	&.about {
 		padding-top: 100px;
 
-		@media (min-width: $screen_sm_min) {
+		@media (min-width: $screen-sm-min) {
 			padding-top: 110px;
 		}
 		
@@ -13,31 +13,26 @@
 			padding: 30px 20px;
 			text-align: center;
 
-			@media (min-width: $screen_sm_min) {
+			@media (min-width: $screen-sm-min) {
 				padding: 40px;
 			}
 
-			@media (min-width: $screen_md_min) {
+			@media (min-width: $screen-md-min) {
 				padding: 80px 40px;
 			}
 		}
 
-		.thumbnail {
-			border: 2px solid $section_about_background_color;
+		.image {
+			border: 4px solid $section_about_background_color;
 			margin: -100px auto 0 auto;
 			width: 150px;
-			@include border-radius(50%);
 
-			@media (min-width: $screen_sm_min) {
+			@media (min-width: $screen-sm-min) {
 				margin-top: -110px;
 			}
 
-			@media (min-width: $screen_md_min) {
+			@media (min-width: $screen-md-min) {
 				margin-top: -150px;
-			}
-			
-			img {
-				@include border-radius(50%);
 			}
 		}
 
@@ -47,7 +42,7 @@
 			line-height: 40px;
 			margin: 20px 0 0 0;
 
-			@media (min-width: $screen_md_min) {
+			@media (min-width: $screen-md-min) {
 				font-size: 35px;
 				margin-top: 40px;
 			}
@@ -68,7 +63,7 @@
 			line-height: 27px;
 			margin: 20px 0 0 0;
 
-			@media (min-width: $screen_md_min) {
+			@media (min-width: $screen-md-min) {
 				margin: 20px 90px 0 90px;
 			}
 

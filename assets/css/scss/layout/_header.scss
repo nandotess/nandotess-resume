@@ -77,13 +77,13 @@
 			border-top: none;
 			@include box-shadow(none);
 
-			@media (min-width: $screen_sm_min) {
+			@media (min-width: $screen-sm-min) {
 				max-height: 50px;
 				text-align: center;
 			}
 
 			.navbar-nav {
-				@media (min-width: $screen_sm_min) {
+				@media (min-width: $screen-sm-min) {
 					display: inline-block;
 					float: none;
 				}

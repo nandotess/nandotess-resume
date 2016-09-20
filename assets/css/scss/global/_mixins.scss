@@ -100,7 +100,7 @@
 
 // Hover effect: border bottom
 @mixin hover_border_bottom($color) {
-	@media (min-width: $screen_sm_min) {
+	@media (min-width: $screen-sm-min) {
 		a {
 			overflow: hidden;
 			position: relative;

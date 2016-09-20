@@ -8,7 +8,7 @@ body {
 
 		.navbar-nav {
 			li {
-				@media (min-width: $screen_sm_min) {
+				@media (min-width: $screen-sm-min) {
 					a {
 						color: $contact_details_text_color;
 
@@ -38,7 +38,7 @@ body {
 		.navbar-collapse {
 			.navbar-nav {
 				li {
-					@media (min-width: $screen_sm_min) {
+					@media (min-width: $screen-sm-min) {
 						a {
 							color: $main_menu_text_color;
 							
@@ -59,7 +59,7 @@ body {
 			background-color: $section_about_background_color;
 		}
 
-		.thumbnail {
+		.image {
 			border-color: $section_about_background_color;
 		}
 

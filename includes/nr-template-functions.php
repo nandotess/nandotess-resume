@@ -121,13 +121,11 @@ if ( ! function_exists( 'nr_homepage_section_about' ) ) {
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<div class="thumbnail">
-							<?php if ( has_post_thumbnail() ) : ?>
-								<?php the_post_thumbnail( 'medium', array( 'class' => 'img-responsive' ) ); ?>
-							<?php else: ?>
-								<img width="300" height="300" src="http://placehold.it/300x300" class="img-responsive wp-post-image" alt="placeholder">
-							<?php endif; ?>
-						</div>
+						<?php if ( has_post_thumbnail() ) : ?>
+							<?php the_post_thumbnail( 'medium', array( 'class' => 'image img-responsive img-circle' ) ); ?>
+						<?php else: ?>
+							<img width="300" height="300" src="http://placehold.it/300x300" class="image img-responsive img-circle wp-post-image" alt="placeholder">
+						<?php endif; ?>
 
 						<h1 class="title"><?php bloginfo( 'name' ); ?></h1>
 
