@@ -1,6 +1,41 @@
 .section {
 	padding-top: 30px;
 
+	.title {
+		font-size: 28px;
+		line-height: 40px;
+
+		@media (min-width: $screen-md-min) {
+			font-size: 35px;
+		}
+	}
+
+	.description {
+		font: {
+			size: 18px;
+			weight: normal;
+		}
+	}
+
+	.full-description {
+		font-size: 15px;
+		line-height: 27px;
+
+		p {
+			&:last-child {
+				margin: 0;
+			}
+		}
+
+		a {
+			&:hover,
+			&:active,
+			&:focus {
+				text-decoration: underline;
+			}
+		}
+	}
+
 	&.about {
 		padding-top: 100px;
 
@@ -38,47 +73,28 @@
 
 		.title {
 			color: $section_about_title_color;
-			font-size: 28px;
-			line-height: 40px;
 			margin: 20px 0 0 0;
 
 			@media (min-width: $screen-md-min) {
-				font-size: 35px;
 				margin-top: 40px;
 			}
 		}
 
 		.description {
 			color: $section_about_text_color;
-			font: {
-				size: 18px;
-				weight: normal;
-			}
 			margin: 15px 0 0 0;
 		}
 
 		.full-description {
 			color: $section_about_text_color;
-			font-size: 15px;
-			line-height: 27px;
 			margin: 20px 0 0 0;
 
 			@media (min-width: $screen-md-min) {
 				margin: 20px 90px 0 90px;
 			}
 
-			p {
-				margin: 0;
-			}
-
 			a {
 				color: $section_about_link_color;
-
-				&:hover,
-				&:active,
-				&:focus {
-					text-decoration: underline;
-				}
 			}
 		}
 	}
