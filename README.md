@@ -1,5 +1,5 @@
+[![Build status](https://travis-ci.org/nandotess/nandotess-resume.svg?branch=master)](https://travis-ci.org/nandotess/nandotess-resume)
+[![built with gulp](https://img.shields.io/badge/gulp-builds_this_project-eb4a4b.svg?logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAAYAAAAOCAMAAAA7QZ0XAAAABlBMVEUAAAD%2F%2F%2F%2Bl2Z%2FdAAAAAXRSTlMAQObYZgAAABdJREFUeAFjAAFGRjSSEQzwUgwQkjAFAAtaAD0Ls2nMAAAAAElFTkSuQmCC)](http://gulpjs.com/)
+
 # nandotess's resume
 A WordPress theme for building fast, responsive and awesome web resumes
-
-[![Build status](https://travis-ci.org/nandotess/nandotess-resume.svg?branch=master)](https://travis-ci.org/nandotess/nandotess-resume)
-[![Build with gulp.js](https://camo.githubusercontent.com/2a01d8fcbdfc09eb24d02c6655c897f0ab9ca69a/687474703a2f2f696d672e736869656c64732e696f2f62616467652f6275696c74253230776974682d67756c702e6a732d7265642e73766)](http://gulpjs.com/)
