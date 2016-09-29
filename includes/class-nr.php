@@ -17,7 +17,7 @@ if ( ! class_exists( 'NandotessResume' ) ) :
 	 * The main nandotess's resume class
 	 */
 	class NandotessResume {
-		
+
 		/**
 		 * Setup class
 		 *
@@ -43,8 +43,8 @@ if ( ! class_exists( 'NandotessResume' ) ) :
 			add_theme_support( 'post-thumbnails' );
 			
 			register_nav_menus( array(
-				'primary' => __( 'Primary', 'nandotess-resume' ),
-				'social'  => __( 'Social', 'nandotess-resume' ),
+				'primary' => esc_html__( 'Primary', 'nandotess-resume' ),
+				'social'  => esc_html__( 'Social', 'nandotess-resume' ),
 			) );
 		}
 
@@ -56,9 +56,9 @@ if ( ! class_exists( 'NandotessResume' ) ) :
 		 */
 		public function widgets_init() {
 			$sidebar_args['homepage'] = array(
-				'name'        => __( 'Homepage', 'nandotess-resume' ),
+				'name'        => esc_html__( 'Homepage', 'nandotess-resume' ),
 				'id'          => 'homepage-sidebar',
-				'description' => __( 'Add homepage widgets here.', 'nandotess-resume' ),
+				'description' => esc_html__( 'Add homepage widgets here.', 'nandotess-resume' ),
 			);
 
 			foreach ( $sidebar_args as $sidebar => $args ) {

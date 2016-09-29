@@ -42,11 +42,11 @@ if ( ! function_exists( 'nr_header_nav_contact_details' ) ) {
 				?>
 				<ul class="nav navbar-nav hidden visible-xs">
 					<?php if ( $phone_numbers || is_customize_preview() ) : ?>
-						<li><a class="phone" href="tel:<?php echo esc_html( $phone_numbers ); ?>"><span class="fa fa-phone" aria-hidden="true"></span></a></li>
+						<li><a class="phone" href="tel:<?php echo esc_attr( $phone_numbers ); ?>"><span class="fa fa-phone" aria-hidden="true"></span></a></li>
 					<?php endif; ?>
 
 					<?php if ( $mail || is_customize_preview() ) : ?>
-						<li><a class="mail" href="mailto:<?php echo esc_html( $mail ); ?>"><span class="fa fa-envelope" aria-hidden="true"></span></a></li>
+						<li><a class="mail" href="mailto:<?php echo esc_attr( $mail ); ?>"><span class="fa fa-envelope" aria-hidden="true"></span></a></li>
 					<?php endif; ?>
 				</ul>
 				<?php
@@ -56,11 +56,11 @@ if ( ! function_exists( 'nr_header_nav_contact_details' ) ) {
 					<div class="container-fluid">
 						<ul class="nav navbar-nav">
 							<?php if ( $phone_numbers || is_customize_preview() ) : ?>
-								<li><a class="phone" href="tel:<?php echo esc_html( $phone_numbers ); ?>"><span class="fa fa-phone" aria-hidden="true"></span> <span class="text"><?php echo esc_html( $phone ); ?></span></a></li>
+								<li><a class="phone" href="tel:<?php echo esc_attr( $phone_numbers ); ?>"><span class="fa fa-phone" aria-hidden="true"></span> <span class="text"><?php echo esc_html( $phone ); ?></span></a></li>
 							<?php endif; ?>
 
 							<?php if ( $mail || is_customize_preview() ) : ?>
-								<li><a class="mail" href="mailto:<?php echo esc_html( $mail ); ?>"><span class="fa fa-envelope" aria-hidden="true"></span> <span class="text"><?php echo esc_html( $mail ); ?></span></a></li>
+								<li><a class="mail" href="mailto:<?php echo esc_attr( $mail ); ?>"><span class="fa fa-envelope" aria-hidden="true"></span> <span class="text"><?php echo esc_html( $mail ); ?></span></a></li>
 							<?php endif; ?>
 						</ul>
 					</div>
@@ -134,7 +134,7 @@ if ( ! function_exists( 'nr_homepage_section_about' ) ) {
 								$description = get_bloginfo( 'description', 'display' );
 
 								if ( $description || is_customize_preview() ) : ?>
-									<h2 class="description"><?php echo $description; /* WPCS: xss ok. */ ?></h2>
+									<h2 class="description"><?php echo wp_kses_post( $description ); ?></h2>
 								<?php endif;
 							?>
 
