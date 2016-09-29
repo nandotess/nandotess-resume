@@ -1,6 +1,6 @@
 <?php
 /**
- * The footer
+ * Footer
  *
  * @author   Fernando Tessmann
  * @since    1.0.0

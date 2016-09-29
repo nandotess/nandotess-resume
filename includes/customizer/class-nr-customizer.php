@@ -1,6 +1,6 @@
 <?php
 /**
- * nandotess's resume Customizer Class
+ * Customizer Class
  *
  * @author   Fernando Tessmann
  * @since    1.0.0
@@ -12,12 +12,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
-	
+
 	/**
 	 * The nandotess's resume Customizer class
 	 */
 	class NandotessResume_Customizer {
-		
+
 		/**
 		 * Setup class
 		 */
@@ -25,7 +25,7 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 			add_action( 'after_setup_theme',  array( $this, 'remove_custom_background' ) );
 			add_action( 'wp_footer',          array( $this, 'add_inline_css' ) );
 			add_action( 'customize_register', array( $this, 'customize_register' ) );
-			
+
 			add_action( 'after_switch_theme',   array( $this, 'set_theme_mod_style' ) );
 			add_action( 'customize_save_after', array( $this, 'set_theme_mod_style' ) );
 		}
@@ -39,7 +39,7 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 		public function remove_custom_background() {
 			remove_custom_background();
 		}
-		
+
 		/**
 		 * Add CSS in footer for styles handled by the theme customizer
 		 * If the Customizer is active pull in the raw css. Otherwise pull in the prepared theme_mods if they exist
@@ -50,14 +50,14 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 		public function add_inline_css() {
 			wp_enqueue_style( 'nandotess-resume-customizer', get_stylesheet_uri() );
 			$styles = get_theme_mod( 'nr_styles' );
-			
+
 			if ( is_customize_preview() || ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) || false === $styles ) {
 				wp_add_inline_style( 'nandotess-resume-customizer', $this->get_css() );
 			} else {
 				wp_add_inline_style( 'nandotess-resume-customizer', $styles );
 			}
 		}
-		
+
 		/**
 		 * Add postMessage support for site title and description for the Theme Customizer along with several other settings
 		 *
@@ -335,7 +335,7 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 				'priority'          => 2,
 			) ) );
 		}
-		
+
 		/**
 		 * Assign styles to individual theme mods
 		 *
@@ -345,7 +345,7 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 		public function set_theme_mod_style() {
 			set_theme_mod( 'nr_styles', $this->get_css() );
 		}
-		
+
 		/**
 		 * Get all of the theme mods
 		 *
@@ -359,18 +359,18 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 				'screen-lg-min'                    => '1200px',
 
 				'background_color'                 => get_theme_mod( 'nr_background_color', '#e3e3e3' ),
-				
+
 				'contact_details_background_color' => get_theme_mod( 'nr_contact_details_background_color', '#1e88e5' ),
 				'contact_details_text_color'       => get_theme_mod( 'nr_contact_details_text_color', '#000000' ),
-				
+
 				'main_menu_background_color'       => get_theme_mod( 'nr_main_menu_background_color', '#2196f3' ),
 				'main_menu_text_color'             => get_theme_mod( 'nr_main_menu_text_color', '#ffffff' ),
-				
+
 				'section_about_background_color'   => get_theme_mod( 'nr_section_about_background_color', '#ffffff' ),
 				'section_about_title_color'        => get_theme_mod( 'nr_section_about_title_color', '#5f5f5f' ),
 				'section_about_text_color'         => get_theme_mod( 'nr_section_about_text_color', '#727272' ),
 				'section_about_link_color'         => get_theme_mod( 'nr_section_about_link_color', '#2196f3' ),
-				
+
 				'social_menu_background_color'     => get_theme_mod( 'nr_social_menu_background_color', '#ffffff' ),
 				'social_menu_link_color'           => get_theme_mod( 'nr_social_menu_link_color', '#2196f3' ),
 			) );
@@ -387,22 +387,22 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 			global $wp_filesystem;
 
 			$theme_mods = $this->get_theme_mods();
-			$scss_file = get_template_directory() .'/assets/css/scss/nandotess-resume-customizer.scss';
+			$scss_file = get_template_directory() . '/assets/css/scss/nandotess-resume-customizer.scss';
 			$css = '';
 
 			if ( file_exists( $scss_file ) ) {
 				if ( empty( $wp_filesystem ) ) {
-					require_once( ABSPATH .'/wp-admin/includes/file.php' );
+					require_once( ABSPATH . '/wp-admin/includes/file.php' );
 					WP_Filesystem();
 				}
 
 				if ( $wp_filesystem ) {
 					$scss = apply_filters( 'nr_sass_content', $wp_filesystem->get_contents( $scss_file ) );
-					$scssphp_file = get_template_directory() .'/vendor/leafo/scssphp/scss.inc.php';
+					$scssphp_file = get_template_directory() . '/vendor/leafo/scssphp/scss.inc.php';
 
 					if ( ! empty( $scss ) && file_exists( $scssphp_file ) ) {
 						require_once $scssphp_file;
-			
+
 						$compiler = new \Leafo\ScssPhp\Compiler();
 						$compiler->setFormatter( 'Leafo\ScssPhp\Formatter\Compact' );
 						$compiler->setVariables( $theme_mods );
@@ -411,7 +411,7 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 							$css = $compiler->compile( $scss );
 						} catch ( Exception $e ) {
 							$error = $e->getMessage();
-							return "/*\n\n\$error:\n\n{$error}\n\n\$theme_mods:\n\n". var_export( $theme_mods, TRUE ) ."\n\n\$scss:\n\n{$scss} */";
+							return "/*\n\n\$error:\n\n{$error}\n\n\$theme_mods:\n\n" . var_export( $theme_mods, true ) . "\n\n\$scss:\n\n{$scss} */";
 						}
 					}
 				}

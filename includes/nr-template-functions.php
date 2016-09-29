@@ -1,6 +1,6 @@
 <?php
 /**
- * nandotess's resume functions
+ * Functions
  *
  * @author   Fernando Tessmann
  * @since    1.0.0
@@ -38,7 +38,7 @@ if ( ! function_exists( 'nr_header_nav_contact_details' ) ) {
 		$phone_numbers = preg_replace( '/\D/', '', $phone );
 
 		if ( $mail || $phone_numbers || is_customize_preview() ) :
-			if ( $device === 'mobile' ) :
+			if ( 'mobile' === $device ) :
 				?>
 				<ul class="nav navbar-nav hidden visible-xs">
 					<?php if ( $phone_numbers || is_customize_preview() ) : ?>
@@ -124,7 +124,7 @@ if ( ! function_exists( 'nr_homepage_section_about' ) ) {
 						<div class="col-md-12">
 							<?php if ( has_post_thumbnail() ) : ?>
 								<?php the_post_thumbnail( 'medium', array( 'class' => 'image img-responsive img-circle' ) ); ?>
-							<?php else: ?>
+							<?php else : ?>
 								<img width="300" height="300" src="http://placehold.it/300x300" class="image img-responsive img-circle wp-post-image" alt="placeholder">
 							<?php endif; ?>
 

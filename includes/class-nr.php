@@ -1,6 +1,6 @@
 <?php
 /**
- * nandotess's resume Class
+ * Main Class
  *
  * @author   Fernando Tessmann
  * @since    1.0.0
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! class_exists( 'NandotessResume' ) ) :
-	
+
 	/**
 	 * The main nandotess's resume class
 	 */
@@ -29,7 +29,7 @@ if ( ! class_exists( 'NandotessResume' ) ) :
 			add_action( 'widgets_init',       array( $this, 'widgets_init' ) );
 			add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ), 10 );
 		}
-		
+
 		/**
 		 * Sets up theme defaults and registers support for various WordPress features
 		 *
@@ -41,7 +41,7 @@ if ( ! class_exists( 'NandotessResume' ) ) :
 
 			add_theme_support( 'title-tag' );
 			add_theme_support( 'post-thumbnails' );
-			
+
 			register_nav_menus( array(
 				'primary' => esc_html__( 'Primary', 'nandotess-resume' ),
 				'social'  => esc_html__( 'Social', 'nandotess-resume' ),
@@ -66,7 +66,7 @@ if ( ! class_exists( 'NandotessResume' ) ) :
 					'before_widget' => '<div class="widget %2$s">',
 					'after_widget'  => '</div>',
 					'before_title'  => '<h2 class="title">',
-					'after_title'   => '</h2>'
+					'after_title'   => '</h2>',
 				);
 
 				register_sidebar( $args + $widget_tags );

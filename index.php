@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file
+ * Main template file
  *
  * @author   Fernando Tessmann
  * @since    1.0.0

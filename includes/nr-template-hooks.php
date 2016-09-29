@@ -1,6 +1,6 @@
 <?php
 /**
- * nandotess's resume hooks
+ * Hooks
  *
  * @author   Fernando Tessmann
  * @since    1.0.0

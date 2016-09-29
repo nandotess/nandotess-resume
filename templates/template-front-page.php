@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the homepage
+ * Homepage template
  *
  * Template Name: Homepage
  *

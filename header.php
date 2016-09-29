@@ -1,6 +1,6 @@
 <?php
 /**
- * The header
+ * Header
  *
  * @author   Fernando Tessmann
  * @since    1.0.0
