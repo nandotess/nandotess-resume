@@ -4,6 +4,4 @@ node_modules
 vendor/composer
 vendor/bin
 vendor/autoload.php
-.jscsrc
-.jshintignore
 composer.phar

@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 
 	/**
-	 * The nandotess's resume Customizer class
+	 * Customizer Class
 	 */
 	class NandotessResume_Customizer {
 
@@ -152,6 +152,7 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 			 */
 			$wp_customize->add_setting( 'nr_phone', array(
 				'default'           => '+0000 0000 0000',
+				'sanitize_callback' => 'esc_html',
 				'transport'         => 'postMessage',
 			) );
 
@@ -174,6 +175,7 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 			 */
 			$wp_customize->add_setting( 'nr_mail', array(
 				'default'           => 'mail@mail.com',
+				'sanitize_callback' => 'is_email',
 				'transport'         => 'postMessage',
 			) );
 

@@ -2940,8 +2940,6 @@ body { background-color: #e3e3e3; position: relative; }
 
 a:hover, a:active, a:focus { text-decoration: none; }
 
-.site { padding-bottom: 30px; }
-
 .container { max-width: 1280px; }
 @media (min-width: 768px) { .container { width: 85%; } }
 @media (min-width: 992px) { .container { width: 70%; } }
@@ -2952,6 +2950,48 @@ a:hover, a:active, a:focus { text-decoration: none; }
 .screen-reader-text:focus { background-color: #f1f1f1; clip: auto; color: black; display: block; font-size: 14px; font-weight: bold; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); -o-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); }
 
 #content[tabindex="-1"]:focus { outline: 0; }
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone { margin: 5px 20px 20px 0; }
+
+.aligncenter, div.aligncenter { display: block; margin: 5px auto 5px auto; }
+
+.alignright { float: right; margin: 5px 0 20px 20px; }
+
+.alignleft { float: left; margin: 5px 20px 20px 0; }
+
+a img.alignright { float: right; margin: 5px 0 20px 20px; }
+
+a img.alignnone { margin: 5px 20px 20px 0; }
+
+a img.alignleft { float: left; margin: 5px 20px 20px 0; }
+
+a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+.wp-caption { background: #fff; border: 1px solid #f0f0f0; max-width: 96%; /* Image does not overflow the content area */ padding: 5px 3px 10px; text-align: center; }
+
+.wp-caption.alignnone { margin: 5px 20px 20px 0; }
+
+.wp-caption.alignleft { margin: 5px 20px 20px 0; }
+
+.wp-caption.alignright { margin: 5px 0 20px 20px; }
+
+.wp-caption img { border: 0 none; height: auto; margin: 0; max-width: 98.5%; padding: 0; width: auto; }
+
+.wp-caption p.wp-caption-text { font-size: 11px; line-height: 17px; margin: 0; padding: 0 4px 5px; }
+
+/* Text meant only for screen readers. */
+.screen-reader-text { clip: rect(1px, 1px, 1px, 1px); position: absolute !important; height: 1px; width: 1px; overflow: hidden; }
+
+.screen-reader-text:focus { background-color: #f1f1f1; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); clip: auto !important; color: #21759b; display: block; font-size: 14px; font-size: 0.875rem; font-weight: bold; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; /* Above WP toolbar. */ }
+
+/* http://themecheck.org/  */
+.sticky { position: static; }
+
+.bypostauthor { position: static; }
+
+.gallery-caption { position: static; }
 
 .site-header { position: relative; z-index: 2; }
 .site-header .navbar-contact-details { background-color: #1e88e5; border: none; margin-bottom: 0; max-height: 50px; text-align: center; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; border-radius: 0; }
@@ -2995,8 +3035,8 @@ body.admin-bar .site-header .navbar-main.affix { top: 32px; }
 
 body.navbar-main-affixed .site-content { padding-top: 54px; }
 
-.site-footer { padding-top: 30px; }
-.site-footer .row { background-color: white; padding: 20px; text-align: center; }
+.site-footer { background-color: white; margin-top: 30px; }
+.site-footer .row { padding: 20px; text-align: center; }
 @media (min-width: 768px) { .site-footer .row { padding: 30px; } }
 .site-footer .navbar-nav { display: inline-block; float: none; }
 .site-footer .navbar-nav li { display: inline-block; margin-right: 10px; }
