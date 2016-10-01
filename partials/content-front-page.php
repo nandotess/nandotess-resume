@@ -6,6 +6,7 @@
  * @since    1.0.0
  * @package  nandotess-resume
  */
+
 ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

@@ -6,6 +6,7 @@
  * @since    1.0.0
  * @package  nandotess-resume
  */
+
 ?>
 
 <section class="section error-404">

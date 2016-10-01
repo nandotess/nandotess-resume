@@ -29,6 +29,7 @@ if ( ! function_exists( 'nr_header_nav_contact_details' ) ) {
 	/**
 	 * Contact details menu
 	 *
+	 * @param string $device Device.
 	 * @since  1.0.0
 	 * @return void
 	 */

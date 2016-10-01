@@ -61,7 +61,7 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 		/**
 		 * Add postMessage support for site title and description for the Theme Customizer along with several other settings
 		 *
-		 * @param WP_Customize_Manager $wp_customize Theme Customizer object
+		 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
 		 * @since  1.0.0
 		 * @return void
 		 */
