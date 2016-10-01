@@ -71,14 +71,14 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: includes/nr-template-functions.php:87
+#: includes/nr-template-functions.php:88
 msgid "Toggle navigation"
 msgstr ""
 
-#: partials/content-none.php:15
+#: partials/content-none.php:16
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: partials/content-none.php:16
+#: partials/content-none.php:17
 msgid "It looks like nothing was found at this location."
 msgstr ""
