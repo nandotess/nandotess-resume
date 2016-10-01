@@ -17,6 +17,10 @@
 
 (function($) {
 
+	var $window = $(window),
+		windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+		windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
 	$(window).load(function() {
 
 		$('body').scrollspy({
@@ -42,13 +46,19 @@
 
 	$(document).on('click', '.navbar-main a[href*=#]:not([href=#])', function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-			var target = $(this.hash);
+			var target = $(this.hash),
+				offset = windowWidth < 768 ? 30 : 80;
+			
 			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 			
 			if (target.length) {
 				$('html,body').animate({
-					scrollTop: target.offset().top - 80
+					scrollTop: target.offset().top - offset
 				}, 500);
+
+				if (windowWidth < 768) {
+					$('.navbar-toggle:visible').click();
+				}
 
 				return false;
 			}
