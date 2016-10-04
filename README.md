@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/nandotess/nandotess-resume.svg?branch=master)](https://travis-ci.org/nandotess/nandotess-resume)
 
 # nandotess resume
-A WordPress theme for building fast, responsive and awesome web resumes
+A WordPress theme for building fast, responsive and awesome web resumes.
 
 ## About me
 * WordPress Theme
@@ -12,7 +12,7 @@ A WordPress theme for building fast, responsive and awesome web resumes
 * WP Customizer Selective Refresh
 
 ## Skills, Experiences and Portfolio
-To add extra content to your resume (skills, experiences and portfolio), please combine this WordPress theme with the WordPress plugin [nandotess resume extra content](https://github.com/nandotess/nandotess-resume-extra-content).
+To add extra content to your resume, please combine this WordPress theme with the WordPress plugin [nandotess resume extra content](https://github.com/nandotess/nandotess-resume-extra-content).
 
 ## Example
 [@TODO](#)
@@ -61,9 +61,8 @@ This will run the bower.json file and download the list of modules to a "bower_c
 * `gulp deploy` to compile style, script and language files
 
 ## Resources
+* https://travis-ci.org/
 * https://github.com/twbs/bootstrap (custom setup)
 * https://github.com/FortAwesome/Font-Awesome
 * https://github.com/leafo/scssphp
-* https://github.com/humanmade/Custom-Meta-Boxes
 * https://github.com/squizlabs/PHP_CodeSniffer
-* https://travis-ci.org/
