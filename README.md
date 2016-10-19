@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/nandotess/nandotess-resume.svg?branch=master)](https://travis-ci.org/nandotess/nandotess-resume)
+[![Code Climate](https://codeclimate.com/github/nandotess/nandotess-resume/badges/gpa.svg)](https://codeclimate.com/github/nandotess/nandotess-resume)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nandotess/nandotess-resume/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nandotess/nandotess-resume/?branch=master)
 
 # nandotess resume
 A WordPress theme for building fast, responsive and awesome web resumes.
