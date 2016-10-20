@@ -1,0 +1,16 @@
+filter:
+    excluded_paths:
+        - 'vendor/*'
+        - '*.min.js'
+checks:
+    php: true
+    javascript: true
+coding_style:
+    php:
+        indentation:
+            general:
+                use_tabs: true
+        spaces:
+            around_operators:
+                concatenation: true
+                negation: true
