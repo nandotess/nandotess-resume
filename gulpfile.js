@@ -82,7 +82,7 @@ gulp.task('compile-js', function() {
 				}))
 				.pipe(concat(path.basename(file.path)));
 		}))
-		.pipe(gulp.dest(config.jsPath))
+		//.pipe(gulp.dest(config.jsPath))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(uglify())
 		.pipe(gulp.dest(config.jsPath));

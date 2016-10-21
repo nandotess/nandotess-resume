@@ -18,10 +18,10 @@
 (function($) {
 
 	var $window = $(window),
-		windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
-		windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+		//windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight,
+		windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-	$(window).load(function() {
+	$window.load(function() {
 
 		$('body').scrollspy({
 			target: '#navbar-main',

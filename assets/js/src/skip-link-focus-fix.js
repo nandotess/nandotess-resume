@@ -6,6 +6,8 @@
  * Learn more: https://git.io/vWdr2
  */
 (function() {
+
+	/** global: navigator */
 	
 	var isWebkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1,
 	    isOpera  = navigator.userAgent.toLowerCase().indexOf( 'opera' )  > -1,
