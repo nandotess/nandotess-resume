@@ -23,12 +23,14 @@
 
 	$window.load(function() {
 
+		var navbarMain = $('.navbar-main');
+
 		$('body').scrollspy({
 			target: '#navbar-main',
-			offset: $('.navbar-main').outerHeight(true)
+			offset: navbarMain.outerHeight(true)
 		});
 
-		$('.navbar-main').affix({
+		navbarMain.affix({
 			offset: {
 				top: $('.navbar-contact-details').outerHeight(true)
 			}

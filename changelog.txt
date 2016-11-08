@@ -2,5 +2,10 @@
 All notable changes to this project will be documented in this file.
 
 ## [1.0.0]
-### Added
 - First version.
+
+## [1.1.0]
+- Configured Code Climate service.
+- Configured Scrutinizer service.
+- Made WP Customizer (Colors) doesn't reload the page while changing colors.
+- Back the background theme support.

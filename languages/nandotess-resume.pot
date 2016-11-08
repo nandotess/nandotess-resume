@@ -15,55 +15,55 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: includes/class-nr.php:46
+#: includes/class-nr.php:45
 msgid "Primary"
 msgstr ""
 
-#: includes/class-nr.php:47
+#: includes/class-nr.php:46
 msgid "Social"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:93
+#: includes/customizer/class-nr-customizer.php:82
 msgid "Background"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:106, includes/customizer/class-nr-customizer.php:129, includes/customizer/class-nr-customizer.php:213, includes/customizer/class-nr-customizer.php:251, includes/customizer/class-nr-customizer.php:319
+#: includes/customizer/class-nr-customizer.php:95, includes/customizer/class-nr-customizer.php:118, includes/customizer/class-nr-customizer.php:202, includes/customizer/class-nr-customizer.php:240, includes/customizer/class-nr-customizer.php:308
 msgid "Background color"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:116
+#: includes/customizer/class-nr-customizer.php:105
 msgid "Contact Details"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:144, includes/customizer/class-nr-customizer.php:228, includes/customizer/class-nr-customizer.php:281
+#: includes/customizer/class-nr-customizer.php:133, includes/customizer/class-nr-customizer.php:217, includes/customizer/class-nr-customizer.php:270
 msgid "Text color"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:160
+#: includes/customizer/class-nr-customizer.php:149
 msgid "Phone"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:183
+#: includes/customizer/class-nr-customizer.php:172
 msgid "Mail"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:200
+#: includes/customizer/class-nr-customizer.php:189
 msgid "Main Menu"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:238
+#: includes/customizer/class-nr-customizer.php:227
 msgid "Section About"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:266
+#: includes/customizer/class-nr-customizer.php:255
 msgid "Title color"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:296, includes/customizer/class-nr-customizer.php:334
+#: includes/customizer/class-nr-customizer.php:285, includes/customizer/class-nr-customizer.php:323
 msgid "Link color"
 msgstr ""
 
-#: includes/customizer/class-nr-customizer.php:306
+#: includes/customizer/class-nr-customizer.php:295
 msgid "Social Menu"
 msgstr ""
 

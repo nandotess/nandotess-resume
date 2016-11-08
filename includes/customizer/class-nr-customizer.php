@@ -22,22 +22,11 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 		 * Setup class
 		 */
 		public function __construct() {
-			add_action( 'after_setup_theme',  array( $this, 'remove_custom_background' ) );
-			add_action( 'wp_footer',          array( $this, 'add_inline_css' ) );
+			add_action( 'wp_enqueue_scripts', array( $this, 'add_inline_css' ), 9999 );
 			add_action( 'customize_register', array( $this, 'customize_register' ) );
 
 			add_action( 'after_switch_theme',   array( $this, 'set_theme_mod_style' ) );
 			add_action( 'customize_save_after', array( $this, 'set_theme_mod_style' ) );
-		}
-
-		/**
-		 * Remove custom WordPress background
-		 *
-		 * @since  1.0.0
-		 * @return void
-		 */
-		public function remove_custom_background() {
-			remove_custom_background();
 		}
 
 		/**
@@ -394,15 +383,18 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 
 			if ( file_exists( $scss_file ) ) {
 				if ( empty( $wp_filesystem ) ) {
+					/** @noinspection PhpIncludeInspection */
 					require_once( ABSPATH . '/wp-admin/includes/file.php' );
 					WP_Filesystem();
 				}
 
 				if ( $wp_filesystem ) {
-					$scss = apply_filters( 'nr_sass_content', $wp_filesystem->get_contents( $scss_file ) );
+					/** @noinspection PhpUndefinedMethodInspection */
+					$scss         = apply_filters( 'nr_sass_content', $wp_filesystem->get_contents( $scss_file ) );
 					$scssphp_file = get_template_directory() . '/vendor/leafo/scssphp/scss.inc.php';
 
 					if ( ! empty( $scss ) && file_exists( $scssphp_file ) ) {
+						/** @noinspection PhpIncludeInspection */
 						require_once $scssphp_file;
 
 						$compiler = new \Leafo\ScssPhp\Compiler();
@@ -413,7 +405,7 @@ if ( ! class_exists( 'NandotessResume_Customizer' ) ) :
 							$css = $compiler->compile( $scss );
 						} catch ( Exception $e ) {
 							$error = $e->getMessage();
-							return "/*\n\n\$error:\n\n{$error}\n\n\$theme_mods:\n\n" . var_export( $theme_mods, true ) . "\n\n\$scss:\n\n{$scss} */";
+							return "/*\n\n\$error:\n\n{$error}\n\n\$scss:\n\n{$scss} */";
 						}
 					}
 				}
