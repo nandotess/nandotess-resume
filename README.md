@@ -1,6 +1,4 @@
 [![Build Status](https://travis-ci.org/nandotess/nandotess-resume.svg?branch=master)](https://travis-ci.org/nandotess/nandotess-resume)
-[![Code Climate](https://codeclimate.com/github/nandotess/nandotess-resume/badges/gpa.svg)](https://codeclimate.com/github/nandotess/nandotess-resume)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nandotess/nandotess-resume/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nandotess/nandotess-resume/?branch=master)
 
 # nandotess resume
 A WordPress theme for building fast, responsive and awesome web resumes.
@@ -56,11 +54,9 @@ This will run the package.json file and download the list of modules to a "node_
 This will run the bower.json file and download the list of modules to a "bower_components" folder in the template.
 
 ### Gulp Commands
-* `gulp compile-bower` to compile bower files
 * `gulp compile-css` to compile style files
 * `gulp compile-js` to compile script files
-* `gulp compile-pot` to compile language files
-* `gulp deploy` to compile style, script and language files
+* `gulp wordpress-lang` to compile language files
 
 ## Resources
 * https://travis-ci.org/

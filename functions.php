@@ -29,9 +29,9 @@ if ( ! isset( $content_width ) ) {
  */
 $nandotess_resume = (object) array(
 	'version'    => $theme_version,
-	'main'       => require 'includes/class-nr.php',
-	'customizer' => require 'includes/customizer/class-nr-customizer.php',
+	'main'       => require 'includes/class-nandotess-resume.php',
+	'customizer' => require 'includes/customizer/class-nandotess-resume-customizer.php',
 );
 
-require 'includes/nr-template-hooks.php';
-require 'includes/nr-template-functions.php';
+require 'includes/template-hooks.php';
+require 'includes/template-functions.php';

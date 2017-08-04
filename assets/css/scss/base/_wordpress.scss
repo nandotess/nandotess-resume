@@ -1,8 +1,6 @@
-/* =WordPress Core
--------------------------------------------------------------- */
-.alignnone {
-	margin: 5px 20px 20px 0;
-}
+/// WordPress Core
+
+.alignnone { margin: 5px 20px 20px 0; }
 
 .aligncenter,
 div.aligncenter {
@@ -25,9 +23,7 @@ a img.alignright {
 	margin: 5px 0 20px 20px;
 }
 
-a img.alignnone {
-	margin: 5px 20px 20px 0;
-}
+a img.alignnone { margin: 5px 20px 20px 0; }
 
 a img.alignleft {
 	float: left;
@@ -43,22 +39,16 @@ a img.aligncenter {
 .wp-caption {
 	background: #fff;
 	border: 1px solid #f0f0f0;
-	max-width: 96%; /* Image does not overflow the content area */
+	max-width: 96%; /// Image does not overflow the content area
 	padding: 5px 3px 10px;
 	text-align: center;
 }
 
-.wp-caption.alignnone {
-	margin: 5px 20px 20px 0;
-}
+.wp-caption.alignnone { margin: 5px 20px 20px 0; }
 
-.wp-caption.alignleft {
-	margin: 5px 20px 20px 0;
-}
+.wp-caption.alignleft { margin: 5px 20px 20px 0; }
 
-.wp-caption.alignright {
-	margin: 5px 0 20px 20px;
-}
+.wp-caption.alignright { margin: 5px 0 20px 20px; }
 
 .wp-caption img {
 	border: 0 none;
@@ -76,7 +66,8 @@ a img.aligncenter {
 	padding: 0 4px 5px;
 }
 
-/* Text meant only for screen readers. */
+/// Text meant only for screen readers
+
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
@@ -102,18 +93,13 @@ a img.aligncenter {
 	text-decoration: none;
 	top: 5px;
 	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
+	z-index: 100000; /// Above WP toolbar
 }
 
-/* http://themecheck.org/  */
-.sticky {
-	position: static;
-}
+/// http://themecheck.org/
 
-.bypostauthor {
-	position: static;
-}
+.sticky { position: static; }
 
-.gallery-caption {
-	position: static;
-}
+.bypostauthor { position: static; }
+
+.gallery-caption { position: static; }

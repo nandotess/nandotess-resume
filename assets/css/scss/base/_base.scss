@@ -1,26 +1,38 @@
+* {
+	&,
+	&:focus,
+	&:active:focus { outline: none !important; }
+}
+
+html,
+body { overflow-x: hidden; }
+
+html {
+	font-size: 5px;
+
+	@media (min-width: $screen-sm-min) { font-size: 6.5px; }
+	@media (min-width: $screen-md-min) { font-size: 8px; }
+	@media (min-width: $screen-lg-min) { font-size: 10px; }
+}
+
 body {
 	background-color: $background_color;
+	direction: ltr;
 	position: relative;
 }
 
 a {
 	&:hover,
 	&:active,
-	&:focus {
-		text-decoration: none;
-	}
+	&:focus { text-decoration: none; }
 }
 
 .container {
 	max-width: 1280px;
 
-	@media (min-width: $screen-sm-min) {
-		width: 85%;
-	}
+	@media (min-width: $screen-sm-min) { width: 85%; }
 
-	@media (min-width: $screen-md-min) {
-		width: 70%;
-	}
+	@media (min-width: $screen-md-min) { width: 70%; }
 }
 
 .container-fluid {

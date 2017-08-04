@@ -1,36 +1,35 @@
 {
-	"name": "nandotess-resume",
-	"version": "1.1.0",
-	"description": "A WordPress theme for building fast, responsive and awesome web resumes",
-	"homepage": "https://github.com/nandotess/nandotess-resume",
-	"bugs": {
-		"url": "https://github.com/nandotess/nandotess-resume/issues",
-		"email": "nandotess85@gmail.com"
-	},
-	"license": "GPL-3.0",
-	"author": "Fernando Tessmann <nandotess85@mail.com> (http://www.fernandotessmann.com)",
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/nandotess/nandotess-resume.git"
-	},
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"devDependencies": {
-		"gulp": "^3.9.1",
-		"gulp-ruby-sass": "^2.1.0",
-		"gulp-cssnano": "^2.1.2",
-		"gulp-uglify": "^2.0.0",
-		"gulp-rename": "^1.2.2",
-		"gulp-resolve-dependencies": "^2.2.0",
-		"gulp-concat": "^2.6.0",
-		"gulp-foreach": "^0.1.0",
-		"path": "^0.12.7",
-		"gulp-sort": "^2.0.0",
-		"gulp-wp-pot": "^1.3.1",
-		"gulp-gettext": "^0.3.0",
-		"jshint": "^2.9.3",
-		"gulp-jshint": "^2.0.1",
-		"jshint-stylish": "^2.2.1"
-	}
+ "name": "nandotess-resume",
+ "version": "1.2.0",
+ "description": "A WordPress theme for building fast, responsive and awesome web resumes",
+ "homepage": "https://github.com/nandotess/nandotess-resume",
+ "bugs": {
+  "url": "https://github.com/nandotess/nandotess-resume/issues",
+  "email": "nandotess85@gmail.com"
+ },
+ "license": "GPL-3.0",
+ "author": "Fernando Tessmann <nandotess85@mail.com> (http://www.fernandotessmann.com)",
+ "repository": {
+  "type": "git",
+  "url": "git://github.com/nandotess/nandotess-resume.git"
+ },
+ "devDependencies": {
+  "gulp": "^3.9.1",
+  "gulp-rtlcss": "^1.0.0",
+  "gulp-autoprefixer": "^3.1.1",
+  "gulp-concat": "^2.6.1",
+  "gulp-gettext": "^0.3.0",
+  "gulp-jshint": "^2.0.4",
+  "gulp-minify-css": "^1.2.4",
+  "gulp-plumber": "^1.1.0",
+  "gulp-rename": "^1.2.2",
+  "gulp-sass": "^3.1.0",
+  "gulp-sort": "^2.0.0",
+  "gulp-sourcemaps": "^2.6.0",
+  "gulp-uglify": "^2.0.1",
+  "gulp-util": "^3.0.8",
+  "gulp-wp-pot": "^2.0.3",
+  "jshint": "^2.9.4",
+  "map-stream": "^0.0.7"
+ }
 }

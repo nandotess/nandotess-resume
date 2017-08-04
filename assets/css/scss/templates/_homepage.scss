@@ -1,17 +1,13 @@
 .section {
-	padding-top: 30px;
+	padding-top: 3rem;
 
-	.box {
-		@extend %clearfix;
-	}
+	.box { @extend %clearfix; }
 
 	.title {
 		font-size: 28px;
 		line-height: 40px;
 
-		@media (min-width: $screen-md-min) {
-			font-size: 35px;
-		}
+		@media (min-width: $screen-md-min) { font-size: 35px; }
 	}
 
 	.description {
@@ -25,81 +21,54 @@
 		font-size: 15px;
 		line-height: 27px;
 
-		p {
-			&:last-child {
-				margin: 0;
-			}
-		}
+		p:last-child { margin: 0; }
 
 		a {
 			&:hover,
 			&:active,
-			&:focus {
-				text-decoration: underline;
-			}
+			&:focus { text-decoration: underline; }
 		}
 	}
 
 	&.about {
-		padding-top: 100px;
-
-		@media (min-width: $screen-sm-min) {
-			padding-top: 110px;
-		}
+		padding-top: 11rem;
 
 		.box {
 			background-color: $section_about_background_color;
-			padding: 30px 0;
+			padding: 8rem 0;
 			text-align: center;
 
-			@media (min-width: $screen-sm-min) {
-				padding: 40px 25px;
-			}
-
-			@media (min-width: $screen-md-min) {
-				padding: 80px 25px;
-			}
+			@media (min-width: $screen-sm-min) { padding: 8rem 2.5rem; }
 		}
 
 		.image {
 			border: 4px solid $section_about_background_color;
-			margin: -100px auto 0 auto;
-			width: 150px;
-
-			@media (min-width: $screen-sm-min) {
-				margin-top: -110px;
-			}
-
-			@media (min-width: $screen-md-min) {
-				margin-top: -150px;
-			}
+			margin: -15rem auto 0 auto;
+			width: 15rem;
 		}
 
 		.title {
 			color: $section_about_title_color;
-			margin: 20px 0 0 0;
-
-			@media (min-width: $screen-md-min) {
-				margin-top: 40px;
-			}
+			margin: 4rem 0 0 0;
 		}
 
 		.description {
 			color: $section_about_text_color;
-			margin: 15px 0 0 0;
+			margin: 1.5rem 0 0 0;
 		}
 
 		.full-description {
 			color: $section_about_text_color;
-			margin: 20px 0 0 0;
+			margin: 2rem 0 0 0;
 
 			@media (min-width: $screen-md-min) {
-				margin: 20px 90px 0 90px;
+				margin: {
+					left: 9rem;
+					right: 9rem;
+				}
 			}
 
-			a {
-				color: $section_about_link_color;
-			}
+			a { color: $section_about_link_color; }
 		}
 	}
 }

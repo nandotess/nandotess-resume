@@ -1,13 +1,4 @@
 /**
- * @requires ../../../bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js
- * @requires ../../../bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js
- * @requires ../../../bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js
- * @requires ../../../bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js
- * @requires ../../../bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js
- * @requires skip-link-focus-fix.js
- */
-
-/**
  * nandotess-resume.js
  *
  * @author   Fernando Tessmann
@@ -50,9 +41,9 @@
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			var target = $(this.hash),
 				offset = windowWidth < 768 ? 30 : 80;
-			
+
 			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-			
+
 			if (target.length) {
 				$('html,body').animate({
 					scrollTop: target.offset().top - offset

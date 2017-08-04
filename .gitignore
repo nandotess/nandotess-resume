@@ -1,8 +1,6 @@
-.sass-cache
-bower_components
 node_modules
 vendor/composer
 vendor/bin
 vendor/autoload.php
 composer.phar
-.idea
+*.sublime-workspace

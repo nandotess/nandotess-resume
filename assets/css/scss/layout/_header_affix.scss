@@ -7,16 +7,12 @@
 			body.admin-bar & {
 				top: 32px;
 
-				@media (max-width: 782px) {
-					top: 46px;
-				}
+				@media (max-width: 782px) { top: 46px; }
 			}
 		}
 	}
 }
 
 .site-content {
-	body.navbar-main-affixed & {
-		padding-top: 54px;
-	}
+	body.navbar-main-affixed & { padding-top: 54px; }
 }

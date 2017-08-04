@@ -41,7 +41,7 @@ body {
 					@media (min-width: $screen-sm-min) {
 						a {
 							color: $main_menu_text_color;
-							
+
 							&:before {
 								background: $main_menu_text_color;
 							}
@@ -68,7 +68,7 @@ body {
 		}
 
 		.description {
-			color: l$section_about_text_color;
+			color: $section_about_text_color;
 		}
 
 		.full-description {
