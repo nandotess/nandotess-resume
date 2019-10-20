@@ -17,9 +17,6 @@ To add extra content to your resume, please combine this WordPress theme with th
 ## Example
 [@TODO](#)
 
-## Real example
-[Fernando Tessmann resume](http://www.fernandotessmann.com/)
-
 ## Biggest references
 
 ### Best practices
