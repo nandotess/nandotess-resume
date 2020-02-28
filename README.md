@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/nandotess/nandotess-resume.svg?branch=master)](https://travis-ci.org/nandotess/nandotess-resume)
-
-# nandotess resume
+# WordPress Theme: nandotess resume
 A WordPress theme for building fast, responsive and awesome web resumes.
 
 ## About me
